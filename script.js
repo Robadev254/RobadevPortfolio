@@ -135,7 +135,25 @@ if (currentYear) {
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
   contactForm.addEventListener('submit', function(e) {
-    // Form will be submitted to contact.php
-    // PHP handles the validation and response
+    e.preventDefault();
+
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const subject = `New Portfolio Message from ${firstName} ${lastName}`;
+    const body = [
+      `Name: ${firstName} ${lastName}`,
+      `Email: ${email}`,
+      '',
+      message
+    ].join('\n');
+
+    window.location.href = `mailto:robahdev254@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 }
