@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="home-scroll">
 <head>
-    <meta charset="UTF-8">  
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Anthony Mwongela - Software Engineer</title>
     <link
@@ -9,15 +9,14 @@
       rel="stylesheet"
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="style.css" />
+    >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- Modern Navbar -->
+<body class="home-fullpage">
     <nav id="NavPos" class="navbar navbar-expand-lg w-100 modern-navbar">
       <div class="container-fluid">
-        <a class="navbar-brand neon-brand" href="#home">
+        <a class="navbar-brand neon-brand" href="index.html">
           <i class="fas fa-code"></i> Anthony Mwongela
         </a>
         <button
@@ -33,472 +32,278 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-3 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link nav-modern" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-modern" id="aboutBtn" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-modern" id="whatDoBtn" href="#whatido">What I Do</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-modern" id="skillsBtn" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-modern" id="projectsBtn" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-modern" id="EducationBtn" href="#education">Education</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-modern" id="contactBtn" href="#contact">Contact</a>
-            </li>
+            <li class="nav-item"><a class="nav-link nav-modern" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-modern" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link nav-modern" href="whatido.html">What I Do</a></li>
+            <li class="nav-item"><a class="nav-link nav-modern" href="skills.html">Skills</a></li>
+            <li class="nav-item"><a class="nav-link nav-modern" href="projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link nav-modern" href="education.html">Education</a></li>
+            <li class="nav-item"><a class="nav-link nav-modern" href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-      <div class="stars"></div>
-      <div class="container-lg">
-        <div class="row min-vh-100 align-items-center">
-          <div class="col-lg-6 order-lg-last mb-5 mb-lg-0">
-            <div class="hero-image">
-              <div class="profile-glow">
-                <img id="myProfileImage"
-                  src="projectsimages/boykid254.jpg"
-                  alt="Anthony Mwongela"
-                  class="profile-img"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 order-lg-first" id="about">
-            <div class="hero-content">
-              <div class="greeting-text">
-                <span class="greeting-label">Welcome to my portfolio</span>
-                <h1 class="hero-title">
-                  <span class="neon-text">Anthony Mwongela</span>
-                  <span class="subtitle-text">Software Engineer</span>
-                </h1>
-              </div>
-              
-              <p class="hero-description">
-                Full-stack developer crafting innovative digital solutions. Specialized in web development, cloud infrastructure, and software engineering with expertise across multiple programming languages and frameworks.
-              </p>
-              
-              <div class="cta-buttons">
-                <a href="myresume.pdf" target="_blank" class="btn btn-neon">
-                  <i class="fas fa-download"></i> Download Resume
-                </a>
-                <button class="btn btn-outline-neon" id="contactCTA">
-                  <i class="fas fa-paper-plane"></i> Get in Touch
-                </button>
-              </div>
-              
-              <div class="social-links">
-                <a href="https://github.com/Robadev254" class="social-link" title="GitHub">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/anthony-robert-5a5290227/" class="social-link" title="LinkedIn">
-                  <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://x.com/roba_254" class="social-link" title="Twitter">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://www.instagram.com/robahdev?igsh=MXdjMG0wbms0Z2U4bQ==" class="social-link" title="Instagram">
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- What I Do Section -->
-    <section id="whatido" class="whatido-section">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2>What I Do</h2>
-          <p class="section-subtitle">Services & Expertise</p>
-        </div>
-        
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-4">
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="fas fa-code"></i>
-              </div>
-              <h3>Full Stack Development</h3>
-              <p>Building responsive and dynamic web applications using modern frameworks and technologies. From frontend design to backend architecture.</p>
-            </div>
-          </div>
-          
-          <div class="col-md-6 col-lg-4">
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="fas fa-cloud"></i>
-              </div>
-              <h3>Cloud & DevOps</h3>
-              <p>Deploying and managing applications on AWS and Azure. System engineering, automation, and infrastructure optimization.</p>
-            </div>
-          </div>
-          
-          <div class="col-md-6 col-lg-4">
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="fas fa-database"></i>
-              </div>
-              <h3>Database Design</h3>
-              <p>Designing efficient database solutions with MySQL and MongoDB. Data modeling, optimization, and management.</p>
-            </div>
-          </div>
-          
-          <div class="col-md-6 col-lg-4">
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="fas fa-laptop"></i>
-              </div>
-              <h3>GUI Applications</h3>
-              <p>Creating desktop applications with Java and modern UI frameworks. User-centric design with optimal performance.</p>
-            </div>
-          </div>
-          
-          <div class="col-md-6 col-lg-4">
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="fas fa-brain"></i>
-              </div>
-              <h3>AI & Data Science</h3>
-              <p>Machine learning implementations using TensorFlow, PyTorch, and scikit-learn. Data analysis and visualization.</p>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="fas fa-lightbulb"></i>
-              </div>
-              <h3>Technical Consulting</h3>
-              <p>Helping teams plan, improve, and ship practical software solutions with clean architecture and reliable workflows.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2>Projects</h2>
-          <p class="section-subtitle">Selected Work</p>
-        </div>
-
-        <div class="project-grid">
-        <!-- Project 1 -->
-        <div>
-          <div class="project-card">
-            <div class="project-image">
-              <img src="projectsimages/alx-software%20engineering%20programme.png" alt="DevOps Project">
-              <div class="project-overlay">
-                <a href="https://github.com/Robadev254/alx-system_engineering-devops" class="btn-project">
-                  <i class="fab fa-github"></i> View Code
-                </a>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>Software Engineering DevOps</h3>
-              <div class="tech-tags">
-                <span class="tech-tag">Shell</span>
-                <span class="tech-tag">Linux</span>
-                <span class="tech-tag">AWS</span>
-              </div>
-              <p>Comprehensive ALX system engineering and DevOps course covering infrastructure, automation, and deployment strategies.</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Project 2 -->
-        <div>
-          <div class="project-card">
-            <div class="project-image">
-              <img src="projectsimages/myportifolio.jpg" alt="Portfolio Project">
-              <div class="project-overlay">
-                <a href="https://github.com/Robadev254/RobadevPortfolio" class="btn-project">
-                  <i class="fab fa-github"></i> View Code
-                </a>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>Personal Portfolio Website</h3>
-              <div class="tech-tags">
-                <span class="tech-tag">HTML5</span>
-                <span class="tech-tag">CSS3</span>
-                <span class="tech-tag">JavaScript</span>
-              </div>
-              <p>Modern, responsive portfolio website showcasing projects and professional experience with smooth animations.</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Project 3 -->
-        <div>
-          <div class="project-card">
-            <div class="project-image">
-              <img src="projectsimages/java.jpg" alt="Java GUI Project">
-              <div class="project-overlay">
-                <a href="https://github.com/Robadev254/USERINTERFACE-JAVA" class="btn-project">
-                  <i class="fab fa-github"></i> View Code
-                </a>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>Restaurant Management GUI</h3>
-              <div class="tech-tags">
-                <span class="tech-tag">Java</span>
-                <span class="tech-tag">Swing</span>
-                <span class="tech-tag">OOP</span>
-              </div>
-              <p>Desktop application for restaurant management with intuitive GUI, built with Java and demonstrating strong OOP principles.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="home-scroll-dots" aria-label="Homepage sections">
+      <a href="#home" aria-label="Home"></a>
+      <a href="#about-preview" aria-label="About"></a>
+      <a href="#services-preview" aria-label="What I Do"></a>
+      <a href="#projects-preview" aria-label="Projects"></a>
+      <a href="#skills-preview" aria-label="Skills"></a>
+      <a href="#education-preview" aria-label="Education"></a>
+      <a href="#contact-preview" aria-label="Contact"></a>
     </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2>Skills</h2>
-          <p class="section-subtitle">Technologies & Tools</p>
-        </div>
+    <main>
+      <section id="home" class="hero-section home-hero home-panel">
+        <div class="stars"></div>
+        <div class="container-lg">
+          <div class="row home-panel-row align-items-center">
+            <div class="col-lg-6 order-lg-last mb-5 mb-lg-0">
+              <div class="hero-image">
+                <div class="profile-glow">
+                  <img
+                    id="myProfileImage"
+                    src="projectsimages/Boykid254.jpg"
+                    alt="Anthony Mwongela"
+                    class="profile-img"
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 order-lg-first">
+              <div class="hero-content">
+                <div class="greeting-text">
+                  <span class="greeting-label">Welcome to my portfolio</span>
+                  <h1 class="hero-title">
+                    <span class="neon-text">Anthony Mwongela</span>
+                    <span class="subtitle-text">Software Engineer</span>
+                  </h1>
+                </div>
 
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h4 class="category-title">Frontend</h4>
-            <div class="skill-items">
-              <span class="skill-badge">HTML5</span>
-              <span class="skill-badge">CSS3</span>
-              <span class="skill-badge">JavaScript</span>
-              <span class="skill-badge">TypeScript</span>
-              <span class="skill-badge">Next.js</span>
-              <span class="skill-badge">Bootstrap</span>
-              <span class="skill-badge">jQuery</span>
-              <span class="skill-badge">Responsive Design</span>
-            </div>
-          </div>
-          
-          <div class="skill-category">
-            <h4 class="category-title">Backend & Databases</h4>
-            <div class="skill-items">
-              <span class="skill-badge">TypeScript</span>
-              <span class="skill-badge">PHP</span>
-              <span class="skill-badge">MySQL</span>
-              <span class="skill-badge">PostgreSQL</span>
-              <span class="skill-badge">MongoDB</span>
-              <span class="skill-badge">Apache</span>
-              <span class="skill-badge">RESTful APIs</span>
-            </div>
-          </div>
-          
-          <div class="skill-category">
-            <h4 class="category-title">Cloud & DevOps</h4>
-            <div class="skill-items">
-              <span class="skill-badge">AWS</span>
-              <span class="skill-badge">Azure</span>
-              <span class="skill-badge">PowerShell</span>
-              <span class="skill-badge">Linux</span>
-              <span class="skill-badge">Shell Scripting</span>
-            </div>
-          </div>
-          
-          <div class="skill-category">
-            <h4 class="category-title">AI & Data Science</h4>
-            <div class="skill-items">
-              <span class="skill-badge">TensorFlow</span>
-              <span class="skill-badge">PyTorch</span>
-              <span class="skill-badge">Scikit-learn</span>
-              <span class="skill-badge">NumPy</span>
-              <span class="skill-badge">Pandas</span>
-              <span class="skill-badge">Matplotlib</span>
-            </div>
-          </div>
-          
-          <div class="skill-category">
-            <h4 class="category-title">Tools & Frameworks</h4>
-            <div class="skill-items">
-              <span class="skill-badge">Git</span>
-              <span class="skill-badge">.NET</span>
-              <span class="skill-badge">Arduino</span>
-              <span class="skill-badge">Figma</span>
-              <span class="skill-badge">Adobe Suite</span>
-              <span class="skill-badge">Blender</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+                <p class="hero-description">
+                  Full-stack developer building accessible web experiences, practical APIs, and cloud-ready systems with clean, maintainable engineering.
+                </p>
 
-    <!-- Education Section -->
-    <section id="education" class="education-section">
-      <div class="container">
-        <div class="section-header text-center">
-          <h2>Education</h2>
-          <p class="section-subtitle">Academic Background</p>
-        </div>
+                <div class="cta-buttons">
+                  <button class="btn btn-outline-neon" id="exploreCTA">
+                    <i class="fas fa-arrow-down"></i> Start Scrolling
+                  </button>
+                  <a class="btn btn-outline-neon" href="contact.html">
+                    <i class="fas fa-paper-plane"></i> Get in Touch
+                  </a>
+                </div>
 
-        <div class="education-grid">
-          <div class="education-card">
-            <div class="education-icon">
-              <i class="fas fa-graduation-cap"></i>
-            </div>
-            <img src="images/kca.jpg" class="education-img" alt="KCA University">
-            <div class="education-content">
-              <h3>KCA University</h3>
-              <p class="degree">Bachelor of Science in Software Development</p>
-              <p class="grade"><strong>Grade:</strong> Second Class Upper</p>
-              <p class="duration">Full-time, 4 years</p>
-            </div>
-          </div>
-
-          <div class="education-card">
-            <div class="education-icon">
-              <i class="fas fa-certificate"></i>
-            </div>
-            <img src="images/alx.png" class="education-img" alt="ALX Africa">
-            <div class="education-content">
-              <h3>ALX Africa</h3>
-              <p class="degree">Software Engineering Online Course</p>
-              <p class="grade"><strong>Score:</strong> 80%</p>
-              <p class="additional"><strong>AI Career Essentials:</strong> 85%</p>
-              <p class="duration">Intensive 12-month program</p>
-            </div>
-          </div>
-
-          <div class="education-card">
-            <div class="education-icon">
-              <i class="fas fa-book"></i>
-            </div>
-            <img src="images/mb%20city.png" class="education-img" alt="Makueni Boys High School">
-            <div class="education-content">
-              <h3>Makueni Boys High School</h3>
-              <p class="degree">Secondary Education</p>
-              <p class="duration">Academic foundation in science, technology, and problem solving.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-      <div class="container">
-      <div class="section-header text-center">
-        <h2>Get In Touch</h2>
-        <p class="section-subtitle">Let's collaborate and build something amazing</p>
-      </div>
-      
-      <div class="row g-4">
-        <!-- Contact Form -->
-        <div class="col-lg-6">
-          <div class="contact-form-container">
-            <h3>Send me a Message</h3>
-            <form class="contact-form" id="contactForm">
-              <div class="form-group">
-                <input type="text" class="form-control" id="firstName" name="first_name" placeholder="First Name" required>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="lastName" name="last_name" placeholder="Last Name" required>
-              </div>
-              <div class="form-group">
-                <input type="email" class="form-control" id="email" name="email" placeholder="your@email.com" required>
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
-              </div>
-              <button type="submit" class="btn btn-neon w-100">
-                <i class="fas fa-paper-plane"></i> Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-        
-        <!-- Contact Methods -->
-        <div class="col-lg-6">
-          <div class="contact-methods">
-            <h3>Other Ways to Reach Me</h3>
-            
-            <div class="contact-method">
-              <div class="method-icon">
-                <i class="fab fa-whatsapp"></i>
-              </div>
-              <div class="method-content">
-                <h4>WhatsApp</h4>
-                <p><button type="button" class="btn btn-outline-neon contact-action" data-contact-action="whatsapp">Chat on WhatsApp</button></p>
-              </div>
-            </div>
-            
-            <div class="contact-method">
-              <div class="method-icon">
-                <i class="fas fa-phone"></i>
-              </div>
-              <div class="method-content">
-                <h4>Phone Call</h4>
-                <p><button type="button" class="btn btn-outline-neon contact-action" data-contact-action="phone">Call Me</button></p>
-              </div>
-            </div>
-            
-            <div class="contact-method">
-              <div class="method-icon">
-                <i class="fab fa-linkedin"></i>
-              </div>
-              <div class="method-content">
-                <h4>LinkedIn</h4>
-                <p><button type="button" class="btn btn-outline-neon contact-action" data-contact-action="linkedin">Open LinkedIn</button></p>
-                <small>View my public profile</small>
-              </div>
-            </div>
-
-            <div class="contact-method">
-              <div class="method-icon">
-                <img src="social%20icons/twitter.png" alt="" class="contact-method-img">
-              </div>
-              <div class="method-content">
-                <h4>Twitter</h4>
-                <p><button type="button" class="btn btn-outline-neon contact-action" data-contact-action="twitter">Open Twitter</button></p>
-              </div>
-            </div>
-
-            <div class="contact-method">
-              <div class="method-icon">
-                <img src="social%20icons/instagram.png" alt="" class="contact-method-img">
-              </div>
-              <div class="method-content">
-                <h4>Instagram</h4>
-                <p><button type="button" class="btn btn-outline-neon contact-action" data-contact-action="instagram">Open Instagram</button></p>
+                <div class="social-links">
+                  <a href="https://github.com/Robadev254" class="social-link" title="GitHub" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/anthony-robert-5a5290227/" class="social-link" title="LinkedIn" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="https://x.com/roba_254" class="social-link" title="Twitter" target="_blank" rel="noopener">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="https://www.instagram.com/robahdev?igsh=MXdjMG0wbms0Z2U4bQ==" class="social-link" title="Instagram" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      </div>
-    </section>
-  
-  <!-- Footer -->
-  <footer class="bg-dark text-center text-white py-4">
-    <p>&copy; <span id="currentYear"></span> My Portfolio. All Rights Reserved.</p>
-    <h3>Created by Anthony Mwongela</h3>
-  </footer>
-  
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      </section>
+
+      <section id="about-preview" class="home-panel home-page-panel">
+        <div class="container">
+          <div class="home-panel-layout">
+            <div>
+              <span class="greeting-label">About</span>
+              <h2 class="home-panel-title">I build useful, accessible software with a full-stack mindset.</h2>
+              <p class="home-panel-copy">
+                My work connects thoughtful interfaces, practical APIs, database-backed features, and cloud-ready delivery. I care about products that are easy to use, easy to maintain, and ready to improve.
+              </p>
+              <p class="home-panel-copy">
+                I am looking for software engineering opportunities where I can contribute to frontend, backend, full-stack, or cloud-focused products while growing with a serious engineering team.
+              </p>
+              <div class="cta-buttons">
+                <a href="about.html" class="btn btn-neon">
+                  <i class="fas fa-user"></i> Open About Page
+                </a>
+              </div>
+            </div>
+            <div class="home-highlight-list" aria-label="About highlights">
+              <div>
+                <strong>Current focus</strong>
+                <span>JavaScript, TypeScript, APIs, databases, and cloud workflows.</span>
+              </div>
+              <div>
+                <strong>Professional value</strong>
+                <span>Clean interfaces, maintainable systems, and clear collaboration.</span>
+              </div>
+              <div>
+                <strong>Next direction</strong>
+                <span>Scalable architecture, CI/CD, accessibility, and product engineering.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services-preview" class="home-panel home-page-panel alt-panel">
+        <div class="container">
+          <div class="home-panel-layout">
+            <div>
+              <span class="greeting-label">What I Do</span>
+              <h2 class="home-panel-title">From interface polish to backend structure.</h2>
+              <p class="home-panel-copy">
+                I help turn ideas into working software by combining frontend implementation, backend logic, database design, cloud fundamentals, and practical automation.
+              </p>
+              <div class="cta-buttons">
+                <a href="whatido.html" class="btn btn-neon">
+                  <i class="fas fa-screwdriver-wrench"></i> Open Services Page
+                </a>
+              </div>
+            </div>
+            <div class="home-service-list">
+              <div><i class="fas fa-code"></i><span>Full Stack Development</span></div>
+              <div><i class="fas fa-cloud"></i><span>Cloud & DevOps</span></div>
+              <div><i class="fas fa-database"></i><span>Database Design</span></div>
+              <div><i class="fas fa-brain"></i><span>AI & Data Science</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects-preview" class="home-panel home-page-panel">
+        <div class="container">
+          <div class="home-panel-layout">
+            <div>
+              <span class="greeting-label">Projects</span>
+              <h2 class="home-panel-title">Selected work with code behind it.</h2>
+              <p class="home-panel-copy">
+                My project work includes ALX system engineering and DevOps practice, this portfolio website, and a Java restaurant management GUI built around object-oriented principles.
+              </p>
+              <div class="cta-buttons">
+                <a href="projects.html" class="btn btn-neon">
+                  <i class="fas fa-layer-group"></i> Open Projects Page
+                </a>
+              </div>
+            </div>
+            <div class="home-project-showcase">
+              <img src="projectsimages/myPortifolio.jpg" alt="Portfolio project preview">
+              <div>
+                <strong>Personal Portfolio Website</strong>
+                <span>HTML5, CSS3, JavaScript, responsive design, and smooth page interactions.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills-preview" class="home-panel home-page-panel alt-panel">
+        <div class="container">
+          <div class="home-panel-layout">
+            <div>
+              <span class="greeting-label">Skills</span>
+              <h2 class="home-panel-title">A practical stack for building and shipping.</h2>
+              <p class="home-panel-copy">
+                I work across frontend, backend, databases, cloud, DevOps, and data tooling, with a preference for simple systems that can grow without becoming difficult to maintain.
+              </p>
+              <div class="cta-buttons">
+                <a href="skills.html" class="btn btn-neon">
+                  <i class="fas fa-terminal"></i> Open Skills Page
+                </a>
+              </div>
+            </div>
+            <div class="home-skill-cloud" aria-label="Skills preview">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>TypeScript</span>
+              <span>Next.js</span>
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>MongoDB</span>
+              <span>AWS</span>
+              <span>Azure</span>
+              <span>Linux</span>
+              <span>Git</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="education-preview" class="home-panel home-page-panel">
+        <div class="container">
+          <div class="home-panel-layout">
+            <div>
+              <span class="greeting-label">Education</span>
+              <h2 class="home-panel-title">A foundation in software development and hands-on engineering.</h2>
+              <p class="home-panel-copy">
+                My learning path includes a Bachelor of Science in Software Development from KCA University, ALX Africa software engineering training, and a secondary foundation in science and problem solving.
+              </p>
+              <div class="cta-buttons">
+                <a href="education.html" class="btn btn-neon">
+                  <i class="fas fa-graduation-cap"></i> Open Education Page
+                </a>
+              </div>
+            </div>
+            <div class="home-timeline">
+              <div><strong>KCA University</strong><span>BSc Software Development</span></div>
+              <div><strong>ALX Africa</strong><span>Software Engineering Program</span></div>
+              <div><strong>Makueni Boys High School</strong><span>Science and problem-solving foundation</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact-preview" class="home-panel home-page-panel contact-home-panel alt-panel">
+        <div class="container">
+          <div class="home-panel-layout">
+            <div>
+              <span class="greeting-label">Contact</span>
+              <h2 class="home-panel-title">Let’s build something useful.</h2>
+              <p class="home-panel-copy">
+                Send a message through your email app or use the direct channels on the full contact page.
+              </p>
+              <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-neon">
+                  <i class="fas fa-envelope"></i> Open Contact Page
+                </a>
+              </div>
+            </div>
+            <div class="contact-form-container home-contact-form">
+              <h3>Send me a Message</h3>
+              <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your message here..." required></textarea>
+                </div>
+                <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                <button type="submit" class="btn btn-neon w-100">
+                  <i class="fas fa-paper-plane"></i> Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-center text-white py-4">
+      <p>&copy; <span id="currentYear"></span> My Portfolio. All Rights Reserved.</p>
+      <h3>Created by Anthony Mwongela</h3>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
     <script src="script.js"></script>
