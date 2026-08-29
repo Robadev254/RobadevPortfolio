@@ -1,123 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contact - Anthony Mwongela</title>
-    <link rel="icon" href="./favicon.ico" sizes="any">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Anthony Mwongela, Software Engineer</title>
+  <meta name="description" content="Reach Anthony Mwongela by email, WhatsApp, phone or LinkedIn. The form composes your message and opens it in Gmail to send.">
+  <link rel="icon" href="./favicon.ico" sizes="any">
+  <link rel="preload" href="./fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <nav id="NavPos" class="navbar navbar-expand-lg w-100 modern-navbar">
-      <div class="container-fluid">
-        <a class="navbar-brand neon-brand" href="./index.html"><i class="fas fa-code"></i> Anthony Mwongela</a>
-        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-3 mb-lg-0">
-            <li class="nav-item"><a class="nav-link nav-modern" href="./index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./whatido.html">What I Do</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./skills.html">Skills</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./projects.html">Projects</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./education.html">Education</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./contact.html">Contact</a></li>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="i-base" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></g>
+    <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15"/><path d="M5.5 13 12 19.5 18.5 13"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 5.5 19.5 12 13 18.5"/></symbol>
+    <symbol id="i-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5H5.5v13.5H19V14"/><path d="M14 4h6v6"/><path d="M20 4l-8.5 8.5"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M12 11v6"/><path d="M9.5 14.5 12 17l2.5-2.5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h4l1.5 4.5-2.5 2a12 12 0 0 0 4.5 4.5l2-2.5L21 13v4a3 3 0 0 1-3.3 3A16 16 0 0 1 4 6.3 3 3 0 0 1 7 3z"/></symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8.5 10.5h7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></symbol>
+  </defs>
+</svg>
+
+
+<a class="skip" href="#record">Skip to the record</a>
+<div class="lamp" aria-hidden="true"></div>
+
+<header class="directory">
+  <div class="directory-inner">
+    <a class="plate" href="./index.html">
+      <span class="plate-name">Anthony Mwongela</span>
+      <span class="plate-sub">Software Engineer · Nairobi</span>
+    </a>
+    <button class="rooms-toggle" id="roomsToggle" aria-expanded="false" aria-controls="rooms">
+      <svg aria-hidden="true"><use href="#i-menu"/></svg> Rooms
+    </button>
+    <nav class="rooms" id="rooms" aria-label="Site rooms">
+      <a class="room" href="./index.html"><span class="room-no">00</span> Wall</a>
+      <a class="room" href="./about.html"><span class="room-no">01</span> About</a>
+      <a class="room" href="./whatido.html"><span class="room-no">02</span> Practice</a>
+      <a class="room" href="./skills.html"><span class="room-no">03</span> Holdings</a>
+      <a class="room" href="./projects.html"><span class="room-no">04</span> Works</a>
+      <a class="room" href="./education.html"><span class="room-no">05</span> Record</a>
+      <a class="room" href="./contact.html" aria-current="page"><span class="room-no">06</span> Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="record">
+<section class="wall-section" id="contact">
+    <div class="frame">
+      <div class="section-head">
+        <span class="room-tag">Room 06</span>
+        <h1>Contact</h1>
+        <p>If you are hiring for frontend or full-stack work, this is the shortest route. Email and WhatsApp are the fastest.</p>
+      </div>
+
+      <div class="object">
+        <div>
+          <ul class="reach">
+            <li>
+              <a class="reach-row" href="mailto:robahdev254@gmail.com">
+                <svg aria-hidden="true"><use href="#i-mail"/></svg>
+                <span class="reach-label">Email</span>
+                <span class="reach-value">Open a new message</span>
+              </a>
+            </li>
+            <li>
+              <a class="reach-row" href="https://wa.me/254798348149" target="_blank" rel="noopener">
+                <svg aria-hidden="true"><use href="#i-msg"/></svg>
+                <span class="reach-label">WhatsApp</span>
+                <span class="reach-value">Start a chat</span>
+              </a>
+            </li>
+            <li>
+              <a class="reach-row" href="tel:+254798348149">
+                <svg aria-hidden="true"><use href="#i-phone"/></svg>
+                <span class="reach-label">Phone</span>
+                <span class="reach-value">Place a call</span>
+              </a>
+            </li>
+            <li>
+              <a class="reach-row" href="https://www.linkedin.com/in/anthony-robert-5a5290227/" target="_blank" rel="noopener">
+                <svg aria-hidden="true"><use href="#i-out"/></svg>
+                <span class="reach-label">LinkedIn</span>
+                <span class="reach-value">anthony-robert-5a5290227</span>
+              </a>
+            </li>
+            <li>
+              <a class="reach-row" href="https://github.com/Robadev254" target="_blank" rel="noopener">
+                <svg aria-hidden="true"><use href="#i-out"/></svg>
+                <span class="reach-label">GitHub</span>
+                <span class="reach-value">github.com/Robadev254</span>
+              </a>
+            </li>
+            <li>
+              <a class="reach-row" href="./resume-anthony-mwongela.pdf" download>
+                <svg aria-hidden="true"><use href="#i-file"/></svg>
+                <span class="reach-label">Résumé</span>
+                <span class="reach-value">Download the PDF</span>
+              </a>
+            </li>
           </ul>
+
+          <div class="ledger">
+            <div class="ledger-row rise">
+              <span class="ledger-no">i</span>
+              <h2>Based in</h2>
+              <p class="ledger-note">Nairobi, Kenya — <strong>EAT, UTC+3</strong>. Open to on-site, hybrid or remote.</p>
+            </div>
+            <div class="ledger-row rise">
+              <span class="ledger-no">ii</span>
+              <h2>Looking for</h2>
+              <p class="ledger-note">Frontend or full-stack roles, junior to mid. Contract or permanent.</p>
+            </div>
+            <div class="ledger-row rise">
+              <span class="ledger-no">iii</span>
+              <h2>Reply time</h2>
+              <p class="ledger-note">Within a day, usually sooner. <span class="not-recorded">Calendar booking not recorded</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stock-area">
+          <h2>Compose a message</h2>
+          <p class="dispatch-note">
+            There is no server behind this site, so nothing is submitted anywhere. The form
+            composes your message and opens it in Gmail, ready for you to send — you stay in
+            control of what actually goes out.
+          </p>
+          <form class="dispatch" id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" autocomplete="name" placeholder="Jane Wanjiru" required>
+            </div>
+            <div class="field">
+              <label for="email">Your email</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="jane@company.co.ke" required>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="The role, the team, and what you need built." required></textarea>
+            </div>
+            <p class="dispatch-status" id="formStatus" role="status" aria-live="polite"></p>
+            <button type="submit" class="act act-ink primary">
+              <svg aria-hidden="true"><use href="#i-mail"/></svg> Open in Gmail, ready to send
+            </button>
+          </form>
         </div>
       </div>
-    </nav>
-
-    <main>
-      <section class="page-hero">
-        <div class="stars"></div>
-        <div class="container">
-          <span class="greeting-label">Get in touch</span>
-          <h1 class="page-title">Contact</h1>
-          <p class="page-lead">Send a message through your email app or reach out directly through the channels below.</p>
-        </div>
-      </section>
-
-      <section id="contact" class="contact-section standalone-section">
-        <div class="container">
-          <div class="section-header text-center">
-            <h2>Get In Touch</h2>
-            <p class="section-subtitle">Let's collaborate and build something amazing</p>
-          </div>
-
-          <div class="row g-4">
-            <div class="col-lg-6">
-              <div class="contact-form-container">
-                <h3>Send me a Message</h3>
-                <form class="contact-form" id="contactForm">
-                  <div class="form-group">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-                  </div>
-                  <div class="form-group">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="your@email.com" required>
-                  </div>
-                  <div class="form-group">
-                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
-                  </div>
-                  <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-                  <button type="submit" class="btn btn-neon w-100">
-                    <i class="fas fa-paper-plane"></i> Send Message
-                  </button>
-                </form>
-              </div>
-            </div>
-
-            <div class="col-lg-6">
-              <div class="contact-methods">
-                <h3>Other Ways to Reach Me</h3>
-                <div class="contact-method">
-                  <div class="method-icon"><i class="fab fa-whatsapp"></i></div>
-                  <div class="method-content">
-                    <h4>WhatsApp</h4>
-                    <p><button type="button" class="btn btn-outline-neon contact-action" data-contact-action="whatsapp">Chat on WhatsApp</button></p>
-                  </div>
-                </div>
-                <div class="contact-method">
-                  <div class="method-icon"><i class="fas fa-phone"></i></div>
-                  <div class="method-content">
-                    <h4>Phone Call</h4>
-                    <p><button type="button" class="btn btn-outline-neon contact-action" data-contact-action="phone">Call Me</button></p>
-                  </div>
-                </div>
-                <div class="contact-method">
-                  <div class="method-icon"><i class="fab fa-linkedin"></i></div>
-                  <div class="method-content">
-                    <h4>LinkedIn</h4>
-                    <p><button type="button" class="btn btn-outline-neon contact-action" data-contact-action="linkedin">Open LinkedIn</button></p>
-                    <small>View my public profile</small>
-                  </div>
-                </div>
-                <div class="contact-method">
-                  <div class="method-icon"><i class="fab fa-twitter"></i></div>
-                  <div class="method-content">
-                    <h4>Twitter</h4>
-                    <p><button type="button" class="btn btn-outline-neon contact-action" data-contact-action="twitter">Open Twitter</button></p>
-                  </div>
-                </div>
-                <div class="contact-method">
-                  <div class="method-icon"><i class="fab fa-instagram"></i></div>
-                  <div class="method-content">
-                    <h4>Instagram</h4>
-                    <p><button type="button" class="btn btn-outline-neon contact-action" data-contact-action="instagram">Open Instagram</button></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="bg-dark text-center text-white py-4">
-      <p>&copy; <span id="currentYear"></span> My Portfolio. All Rights Reserved.</p>
-      <h3>Created by Anthony Mwongela</h3>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
+    </div>
+  </section>
+</main>
+<footer class="register">
+  <div class="frame">
+    <div class="register-grid">
+      <div class="register-col">
+        <h2>Repositories</h2>
+        <ul>
+          <li><a href="https://github.com/Robadev254/alx-system_engineering-devops" target="_blank" rel="noopener">alx-system_engineering-devops</a></li>
+          <li><a href="https://github.com/Robadev254/RobadevPortfolio" target="_blank" rel="noopener">RobadevPortfolio</a></li>
+          <li><a href="https://github.com/Robadev254/USERINTERFACE-JAVA" target="_blank" rel="noopener">USERINTERFACE-JAVA</a></li>
+          <li><a href="https://github.com/Robadev254" target="_blank" rel="noopener">github.com/Robadev254</a></li>
+        </ul>
+      </div>
+      <div class="register-col">
+        <h2>Credentials</h2>
+        <ul>
+          <li>BSc Software Development — KCA University</li>
+          <li>Second Class Upper, four years full-time</li>
+          <li>ALX Software Engineering — 80%</li>
+          <li>ALX AI Career Essentials — 85%</li>
+          <li>Makueni Boys High School</li>
+        </ul>
+      </div>
+      <div class="register-col">
+        <h2>Channels</h2>
+        <ul>
+          <li><a href="mailto:robahdev254@gmail.com">Email</a></li>
+          <li><a href="tel:+254798348149">Phone</a></li>
+          <li><a href="https://www.linkedin.com/in/anthony-robert-5a5290227/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://x.com/roba_254" target="_blank" rel="noopener">x.com/roba_254</a></li>
+          <li><a href="https://www.instagram.com/robahdev/" target="_blank" rel="noopener">instagram/robahdev</a></li>
+        </ul>
+      </div>
+      <div class="register-col">
+        <h2>Documents</h2>
+        <ul>
+          <li><a href="./resume-anthony-mwongela.pdf" download>Résumé (PDF)</a></li>
+          <li>Based in Nairobi, Kenya</li>
+          <li>Open to frontend &amp; full-stack roles</li>
+          <li>Available for interview on request</li>
+        </ul>
+      </div>
+      <div class="register-col">
+        <h2>Not recorded</h2>
+        <ul class="ghost">
+          <li>Employment history — <span class="not-recorded">not recorded</span></li>
+          <li>Client engagements — <span class="not-recorded">not recorded</span></li>
+          <li>Live deployment URLs — <span class="not-recorded">not recorded</span></li>
+          <li>Testimonials — <span class="not-recorded">not recorded</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="register-foot">
+      <span>Anthony Mwongela · Software Engineer · Nairobi</span>
+      <span>Catalogued <span id="currentYear">2026</span>. Written by hand — no framework, no build step.</span>
+    </div>
+  </div>
+</footer>
+<script src="./script.js" defer></script>
 </body>
 </html>

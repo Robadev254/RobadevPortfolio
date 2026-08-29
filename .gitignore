@@ -30,3 +30,14 @@ desktop.ini
 # Local scratch files
 *.tmp
 *.temp
+
+# Claude Code / agent files: local settings, preview config, session notes
+.claude/
+CLAUDE.md
+.claude.json
+.mcp.json
+
+# Design-process scratch; build-pages.cjs, pages.json and partials/ are kept
+.impeccable/decision-payload.json
+.impeccable/questions/
+.impeccable/refs/

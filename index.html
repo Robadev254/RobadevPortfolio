@@ -1,312 +1,456 @@
 <!DOCTYPE html>
-<html lang="en" class="home-scroll">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Anthony Mwongela - Software Engineer</title>
-    <link rel="icon" href="./favicon.ico" sizes="any">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    >
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anthony Mwongela — Software Engineer, Full-Stack Web</title>
+  <meta name="description" content="Anthony Mwongela, full-stack software engineer in Nairobi. Public repositories, BSc Software Development, ALX Software Engineering. Available for frontend and full-stack roles.">
+  <link rel="icon" href="./favicon.ico" sizes="any">
+  <link rel="preload" href="./fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./style.css">
 </head>
-<body class="home-fullpage">
-    <nav id="NavPos" class="navbar navbar-expand-lg w-100 modern-navbar">
-      <div class="container-fluid">
-        <a class="navbar-brand neon-brand" href="./index.html">
-          <i class="fas fa-code"></i> Anthony Mwongela
-        </a>
-        <button
-          class="navbar-toggler custom-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-3 mb-lg-0">
-            <li class="nav-item"><a class="nav-link nav-modern" href="./index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./whatido.html">What I Do</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./skills.html">Skills</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./projects.html">Projects</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./education.html">Education</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./contact.html">Contact</a></li>
-          </ul>
+<body>
+<!--
+THESIS: A portfolio is a collection, so it is presented the way an institution presents
+objects: every project, credential and capability is an accessioned object with a rigorous
+label. It refuses the developer-portfolio arrangement of equal-weight glowing tiles where
+nothing is ever named, dated, or accounted for.
+OWN-WORLD: Deep gallery-green wall (#12251e), true-white label stock set on it with hairline
+edges, black-steel vitrines with glass that catches light, Archivo across its real width and
+weight axes, and brass (#c8942f) as the single saturated accent on the entire site.
+STORY: The visitor learns who he is and what is documented within one viewport, reads the
+record as deeply as they choose, and leaves through a contact channel.
+FIRST VIEWPORT: Name at display scale upper-left in expanded caps, surname in brass; a
+specification strip of four fields beneath it; one paragraph; two actions, primary first;
+named channels. Right third holds the portrait mounted in a vitrine with its own caption.
+The lamp band lies across the wall at reading height.
+FORM: The Catalogue Wall, candidate 6 of my ordered grounded list, seed key cd9f9a1d.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance.
+-->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="i-base" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></g>
+    <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15"/><path d="M5.5 13 12 19.5 18.5 13"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 5.5 19.5 12 13 18.5"/></symbol>
+    <symbol id="i-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5H5.5v13.5H19V14"/><path d="M14 4h6v6"/><path d="M20 4l-8.5 8.5"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M12 11v6"/><path d="M9.5 14.5 12 17l2.5-2.5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h4l1.5 4.5-2.5 2a12 12 0 0 0 4.5 4.5l2-2.5L21 13v4a3 3 0 0 1-3.3 3A16 16 0 0 1 4 6.3 3 3 0 0 1 7 3z"/></symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8.5 10.5h7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#record">Skip to the record</a>
+<div class="lamp" aria-hidden="true"></div>
+
+<header class="directory">
+  <div class="directory-inner">
+    <a class="plate" href="./index.html">
+      <span class="plate-name">Anthony Mwongela</span>
+      <span class="plate-sub">Software Engineer · Nairobi</span>
+    </a>
+    <button class="rooms-toggle" id="roomsToggle" aria-expanded="false" aria-controls="rooms">
+      <svg aria-hidden="true"><use href="#i-menu"/></svg> Rooms
+    </button>
+    <nav class="rooms" id="rooms" aria-label="Site rooms">
+      <a class="room" href="./index.html" aria-current="page"><span class="room-no">00</span> Wall</a>
+      <a class="room" href="./about.html"><span class="room-no">01</span> About</a>
+      <a class="room" href="./whatido.html"><span class="room-no">02</span> Practice</a>
+      <a class="room" href="./skills.html"><span class="room-no">03</span> Holdings</a>
+      <a class="room" href="./projects.html"><span class="room-no">04</span> Works</a>
+      <a class="room" href="./education.html"><span class="room-no">05</span> Record</a>
+      <a class="room" href="./contact.html"><span class="room-no">06</span> Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="record">
+  <section class="opening">
+    <div class="frame">
+      <div class="opening-grid">
+        <div class="identity">
+          <h1>Anthony<span class="surname">Mwongela</span></h1>
+          <div class="spec">
+            <div><span class="spec-key">Discipline</span><span class="spec-val">Full-stack web</span></div>
+            <div><span class="spec-key">Based</span><span class="spec-val">Nairobi, Kenya</span></div>
+            <div><span class="spec-key">Qualification</span><span class="spec-val">BSc Software Development</span></div>
+            <div><span class="spec-key">Status</span><span class="spec-val">Open to roles</span></div>
+          </div>
+          <p class="opening-copy">
+            I build web applications end to end — interfaces people can use, APIs and
+            databases behind them, and the Linux and cloud plumbing that keeps them running.
+            Everything on this site is documented: repositories you can read, grades you can
+            check, and a record of exactly what is not yet there.
+          </p>
+          <div class="actions">
+            <a class="act primary" href="./projects.html">
+              <svg aria-hidden="true"><use href="#i-right"/></svg> See the three works
+            </a>
+            <a class="act" href="./contact.html">
+              <svg aria-hidden="true"><use href="#i-mail"/></svg> Get in touch
+            </a>
+            <a class="act plain" href="./resume-anthony-mwongela.pdf" download>
+              <svg aria-hidden="true"><use href="#i-file"/></svg> Résumé, PDF
+            </a>
+          </div>
+          <div class="channels">
+            <a class="channel" href="https://github.com/Robadev254" target="_blank" rel="noopener">GitHub <svg aria-hidden="true"><use href="#i-out"/></svg></a>
+            <a class="channel" href="https://www.linkedin.com/in/anthony-robert-5a5290227/" target="_blank" rel="noopener">LinkedIn <svg aria-hidden="true"><use href="#i-out"/></svg></a>
+            <a class="channel" href="https://x.com/roba_254" target="_blank" rel="noopener">X <svg aria-hidden="true"><use href="#i-out"/></svg></a>
+            <a class="channel" href="https://www.instagram.com/robahdev?igsh=MXdjMG0wbms0Z2U4bQ==" target="_blank" rel="noopener">Instagram <svg aria-hidden="true"><use href="#i-out"/></svg></a>
+          </div>
+        </div>
+        <div class="vitrine-slot">
+          <figure class="vitrine vitrine-portrait">
+            <div class="vitrine-plate">
+              <img src="./projectsimages/portrait.jpg" alt="Anthony Mwongela" width="900" height="1125" fetchpriority="high">
+            </div>
+            <figcaption class="vitrine-caption">
+              <span>Anthony Mwongela</span>
+              <span>Object 00</span>
+            </figcaption>
+          </figure>
         </div>
       </div>
-    </nav>
-
-    <div class="home-scroll-dots" aria-label="Homepage sections">
-      <a href="#home" aria-label="Home"></a>
-      <a href="#about-preview" aria-label="About"></a>
-      <a href="#services-preview" aria-label="What I Do"></a>
-      <a href="#projects-preview" aria-label="Projects"></a>
-      <a href="#skills-preview" aria-label="Skills"></a>
-      <a href="#education-preview" aria-label="Education"></a>
-      <a href="#contact-preview" aria-label="Contact"></a>
     </div>
-
-    <main>
-      <section id="home" class="hero-section home-hero home-panel">
-        <div class="stars"></div>
-        <div class="container-lg">
-          <div class="row home-panel-row align-items-center">
-            <div class="col-lg-6 order-lg-last mb-5 mb-lg-0">
-              <div class="hero-image">
-                <div class="profile-glow">
-                  <img
-                    id="myProfileImage"
-                    src="./projectsimages/boykid254.jpg"
-                    alt="Anthony Mwongela"
-                    class="profile-img"
-                  >
-                </div>
-              </div>
+  </section>
+  <section class="wall-section" id="statement">
+    <div class="frame">
+      <div class="object">
+        <div class="vitrine-slot">
+          <figure class="vitrine">
+            <div class="vitrine-plate">
+              <img src="./projectsimages/portfolio-site.jpg" alt="The portfolio site, shown as one of the three catalogued works" width="1200" height="750" loading="lazy">
             </div>
-            <div class="col-lg-6 order-lg-first">
-              <div class="hero-content">
-                <div class="greeting-text">
-                  <span class="greeting-label">Welcome to my portfolio</span>
-                  <h1 class="hero-title">
-                    <span class="neon-text">Anthony Mwongela</span>
-                    <span class="subtitle-text">Software Engineer</span>
-                  </h1>
-                </div>
-
-                <p class="hero-description">
-                  Full-stack developer building accessible web experiences, practical APIs, and cloud-ready systems with clean, maintainable engineering.
-                </p>
-
-                <div class="cta-buttons">
-                  <button class="btn btn-outline-neon" id="exploreCTA">
-                    <i class="fas fa-arrow-down"></i> Start Scrolling
-                  </button>
-                  <a class="btn btn-outline-neon" href="./contact.html">
-                    <i class="fas fa-paper-plane"></i> Get in Touch
-                  </a>
-                </div>
-
-                <div class="social-links">
-                  <a href="https://github.com/Robadev254" class="social-link" title="GitHub" target="_blank" rel="noopener">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="https://www.linkedin.com/in/anthony-robert-5a5290227/" class="social-link" title="LinkedIn" target="_blank" rel="noopener">
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                  <a href="https://x.com/roba_254" class="social-link" title="Twitter" target="_blank" rel="noopener">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a href="https://www.instagram.com/robahdev?igsh=MXdjMG0wbms0Z2U4bQ==" class="social-link" title="Instagram" target="_blank" rel="noopener">
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+            <figcaption class="vitrine-caption">
+              <span>This site</span>
+              <span>Object 02</span>
+            </figcaption>
+          </figure>
         </div>
-      </section>
-
-      <section id="about-preview" class="home-panel home-page-panel">
-        <div class="container">
-          <div class="home-panel-layout">
+        <div class="label-stack">
+          <article class="label rise">
+            <div class="accession"><b>01</b><span>Statement</span></div>
             <div>
-              <span class="greeting-label">About</span>
-              <h2 class="home-panel-title">I build useful, accessible software with a full-stack mindset.</h2>
-              <p class="home-panel-copy">
-                My work connects thoughtful interfaces, practical APIs, database-backed features, and cloud-ready delivery. I care about products that are easy to use, easy to maintain, and ready to improve.
+              <h2>What I actually do, and how you can check it</h2>
+              <div class="medium">
+                <span>Full-stack web</span><span>JavaScript · TypeScript</span><span>APIs · SQL</span><span>Linux · AWS</span>
+              </div>
+              <p class="curatorial">
+                I work across the whole stack: responsive interfaces in HTML, CSS,
+                JavaScript and TypeScript; REST services and database-backed features on
+                MySQL, PostgreSQL and MongoDB; and the Linux, shell and cloud fundamentals
+                that put them online. My preference is for simple systems that a team can
+                still change six months later.
               </p>
-              <p class="home-panel-copy">
-                I am looking for software engineering opportunities where I can contribute to frontend, backend, full-stack, or cloud-focused products while growing with a serious engineering team.
+              <p class="curatorial">
+                The site you are reading is itself one of the three works below. It has no
+                framework and no build step — every layout, token and interaction here was
+                written by hand, which is the most honest frontend sample I can offer.
               </p>
-              <div class="cta-buttons">
-                <a href="./about.html" class="btn btn-neon">
-                  <i class="fas fa-user"></i> Open About Page
-                </a>
+              <div class="provenance">
+                <a href="./about.html">Read the full about record <svg aria-hidden="true"><use href="#i-right"/></svg></a>
+                <a href="https://github.com/Robadev254/RobadevPortfolio" target="_blank" rel="noopener">Source of this site <svg aria-hidden="true"><use href="#i-out"/></svg></a>
               </div>
             </div>
-            <div class="home-highlight-list" aria-label="About highlights">
-              <div>
-                <strong>Current focus</strong>
-                <span>JavaScript, TypeScript, APIs, databases, and cloud workflows.</span>
-              </div>
-              <div>
-                <strong>Professional value</strong>
-                <span>Clean interfaces, maintainable systems, and clear collaboration.</span>
-              </div>
-              <div>
-                <strong>Next direction</strong>
-                <span>Scalable architecture, CI/CD, accessibility, and product engineering.</span>
-              </div>
-            </div>
-          </div>
+          </article>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <section id="services-preview" class="home-panel home-page-panel alt-panel">
-        <div class="container">
-          <div class="home-panel-layout">
+  <section class="wall-section lit" id="practice">
+    <div class="frame">
+      <div class="section-head">
+        <h2>Practice</h2>
+        <p>Six areas I take work in. The first three are where I am strongest and where I want to be hired.</p>
+      </div>
+      <div class="ledger">
+        <div class="ledger-row rise">
+          <span class="ledger-no">01</span>
+          <h3>Frontend engineering</h3>
+          <p class="ledger-note">Responsive, accessible interfaces in <strong>HTML, CSS, JavaScript, TypeScript</strong> and Next.js. Design tokens, real focus states, keyboard operation, and layouts that hold from 320px up.</p>
+        </div>
+        <div class="ledger-row rise">
+          <span class="ledger-no">02</span>
+          <h3>Backend &amp; APIs</h3>
+          <p class="ledger-note">RESTful services and database-backed features with <strong>PHP, MySQL, PostgreSQL and MongoDB</strong>. Schema design, queries that stay readable, and server-side integration work.</p>
+        </div>
+        <div class="ledger-row rise">
+          <span class="ledger-no">03</span>
+          <h3>Cloud &amp; DevOps</h3>
+          <p class="ledger-note"><strong>Linux, shell scripting, AWS and Azure</strong> fundamentals from the ALX system engineering programme — configuration, automation, and getting an application deployed and observable.</p>
+        </div>
+        <div class="ledger-row rise">
+          <span class="ledger-no">04</span>
+          <h3>Database design</h3>
+          <p class="ledger-note">Data modelling, normalisation and indexing across relational and document stores, with the queries and migrations that follow from them.</p>
+        </div>
+        <div class="ledger-row rise">
+          <span class="ledger-no">05</span>
+          <h3>Desktop applications</h3>
+          <p class="ledger-note">Java and Swing GUI work built on object-oriented structure — the restaurant management application catalogued below.</p>
+        </div>
+        <div class="ledger-row rise">
+          <span class="ledger-no">06</span>
+          <h3>Data &amp; machine learning foundations</h3>
+          <p class="ledger-note">Python workflows with <strong>NumPy, Pandas, Matplotlib and scikit-learn</strong>, plus introductory PyTorch and TensorFlow. Foundations, honestly labelled as such.</p>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="act plain" href="./whatido.html">Open the practice record <svg aria-hidden="true"><use href="#i-right"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wall-section" id="works">
+    <div class="frame">
+      <div class="section-head">
+        <h2>Works</h2>
+        <p>Three catalogued works, each with its repository. There are three, not nine — every one of them is real and readable.</p>
+      </div>
+
+      <div class="object">
+        <div class="vitrine-slot">
+          <figure class="vitrine">
+            <div class="vitrine-plate">
+              <img src="./projectsimages/alx-devops.png" alt="Terminal output from the ALX system engineering and DevOps coursework" width="1200" height="750" loading="lazy">
+            </div>
+            <figcaption class="vitrine-caption"><span>ALX DevOps</span><span>Object 01</span></figcaption>
+          </figure>
+        </div>
+        <div class="label-stack">
+          <article class="label rise">
+            <div class="accession"><b>01</b><span>Work</span></div>
             <div>
-              <span class="greeting-label">What I Do</span>
-              <h2 class="home-panel-title">From interface polish to backend structure.</h2>
-              <p class="home-panel-copy">
-                I help turn ideas into working software by combining frontend implementation, backend logic, database design, cloud fundamentals, and practical automation.
+              <h3>System Engineering &amp; DevOps</h3>
+              <div class="medium"><span>Shell</span><span>Linux</span><span>AWS</span><span>Configuration</span></div>
+              <p class="curatorial">
+                The full ALX system engineering and DevOps track: shell scripting, Linux
+                administration, web server configuration, load balancing, SSH and firewall
+                work, and deployment automation. Committed task by task over the programme
+                rather than assembled at the end.
               </p>
-              <div class="cta-buttons">
-                <a href="./whatido.html" class="btn btn-neon">
-                  <i class="fas fa-screwdriver-wrench"></i> Open Services Page
-                </a>
+              <div class="provenance">
+                <a href="https://github.com/Robadev254/alx-system_engineering-devops" target="_blank" rel="noopener">Repository <svg aria-hidden="true"><use href="#i-out"/></svg></a>
+                <span class="not-recorded">Live deployment not recorded</span>
               </div>
             </div>
-            <div class="home-service-list">
-              <div><i class="fas fa-code"></i><span>Full Stack Development</span></div>
-              <div><i class="fas fa-cloud"></i><span>Cloud & DevOps</span></div>
-              <div><i class="fas fa-database"></i><span>Database Design</span></div>
-              <div><i class="fas fa-brain"></i><span>AI & Data Science</span></div>
-            </div>
-          </div>
+          </article>
         </div>
-      </section>
+      </div>
 
-      <section id="projects-preview" class="home-panel home-page-panel">
-        <div class="container">
-          <div class="home-panel-layout">
+      <div class="object reverse">
+        <div class="vitrine-slot">
+          <figure class="vitrine">
+            <div class="vitrine-plate">
+              <img src="./projectsimages/restaurant-gui.jpg" alt="The Java Swing restaurant management interface" width="1200" height="750" loading="lazy">
+            </div>
+            <figcaption class="vitrine-caption"><span>Restaurant GUI</span><span>Object 03</span></figcaption>
+          </figure>
+        </div>
+        <div class="label-stack">
+          <article class="label rise">
+            <div class="accession"><b>03</b><span>Work</span></div>
             <div>
-              <span class="greeting-label">Projects</span>
-              <h2 class="home-panel-title">Selected work with code behind it.</h2>
-              <p class="home-panel-copy">
-                My project work includes ALX system engineering and DevOps practice, this portfolio website, and a Java restaurant management GUI built around object-oriented principles.
+              <h3>Restaurant Management GUI</h3>
+              <div class="medium"><span>Java</span><span>Swing</span><span>OOP</span><span>Desktop</span></div>
+              <p class="curatorial">
+                A desktop application for restaurant operations — ordering, menu and record
+                handling through a Swing interface. Built to exercise object-oriented
+                structure properly: encapsulated state, inheritance where it earns its
+                place, and event handling kept out of the domain classes.
               </p>
-              <div class="cta-buttons">
-                <a href="./projects.html" class="btn btn-neon">
-                  <i class="fas fa-layer-group"></i> Open Projects Page
-                </a>
+              <div class="provenance">
+                <a href="https://github.com/Robadev254/USERINTERFACE-JAVA" target="_blank" rel="noopener">Repository <svg aria-hidden="true"><use href="#i-out"/></svg></a>
+                <span class="not-recorded">Packaged release not recorded</span>
               </div>
             </div>
-            <div class="home-project-showcase">
-              <img src="./projectsimages/myportifolio.jpg" alt="Portfolio project preview">
-              <div>
-                <strong>Personal Portfolio Website</strong>
-                <span>HTML5, CSS3, JavaScript, responsive design, and smooth page interactions.</span>
-              </div>
-            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="act plain" href="./projects.html">Open the works catalogue <svg aria-hidden="true"><use href="#i-right"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="wall-section lit" id="holdings">
+    <div class="frame">
+      <div class="section-head">
+        <h2>Holdings</h2>
+        <p>The full technical register, grouped as I actually use it.</p>
+      </div>
+      <div class="holdings">
+        <div class="holding rise">
+          <h3>Frontend</h3>
+          <div class="entries">
+            <span class="entry">HTML5</span><span class="entry">CSS3</span><span class="entry">JavaScript</span><span class="entry">TypeScript</span><span class="entry">Next.js</span><span class="entry">Bootstrap</span><span class="entry">jQuery</span><span class="entry">Responsive design</span>
           </div>
         </div>
-      </section>
-
-      <section id="skills-preview" class="home-panel home-page-panel alt-panel">
-        <div class="container">
-          <div class="home-panel-layout">
-            <div>
-              <span class="greeting-label">Skills</span>
-              <h2 class="home-panel-title">A practical stack for building and shipping.</h2>
-              <p class="home-panel-copy">
-                I work across frontend, backend, databases, cloud, DevOps, and data tooling, with a preference for simple systems that can grow without becoming difficult to maintain.
-              </p>
-              <div class="cta-buttons">
-                <a href="./skills.html" class="btn btn-neon">
-                  <i class="fas fa-terminal"></i> Open Skills Page
-                </a>
-              </div>
-            </div>
-            <div class="home-skill-cloud" aria-label="Skills preview">
-              <span>HTML5</span>
-              <span>CSS3</span>
-              <span>JavaScript</span>
-              <span>TypeScript</span>
-              <span>Next.js</span>
-              <span>PHP</span>
-              <span>MySQL</span>
-              <span>MongoDB</span>
-              <span>AWS</span>
-              <span>Azure</span>
-              <span>Linux</span>
-              <span>Git</span>
-            </div>
+        <div class="holding rise">
+          <h3>Backend &amp; data stores</h3>
+          <div class="entries">
+            <span class="entry">PHP</span><span class="entry">RESTful APIs</span><span class="entry">MySQL</span><span class="entry">PostgreSQL</span><span class="entry">MongoDB</span><span class="entry">Apache</span>
           </div>
         </div>
-      </section>
-
-      <section id="education-preview" class="home-panel home-page-panel">
-        <div class="container">
-          <div class="home-panel-layout">
-            <div>
-              <span class="greeting-label">Education</span>
-              <h2 class="home-panel-title">A foundation in software development and hands-on engineering.</h2>
-              <p class="home-panel-copy">
-                My learning path includes a Bachelor of Science in Software Development from KCA University, ALX Africa software engineering training, and a secondary foundation in science and problem solving.
-              </p>
-              <div class="cta-buttons">
-                <a href="./education.html" class="btn btn-neon">
-                  <i class="fas fa-graduation-cap"></i> Open Education Page
-                </a>
-              </div>
-            </div>
-            <div class="home-timeline">
-              <div><strong>KCA University</strong><span>BSc Software Development</span></div>
-              <div><strong>ALX Africa</strong><span>Software Engineering Program</span></div>
-              <div><strong>Makueni Boys High School</strong><span>Science and problem-solving foundation</span></div>
-            </div>
+        <div class="holding rise">
+          <h3>Cloud &amp; DevOps</h3>
+          <div class="entries">
+            <span class="entry">Linux</span><span class="entry">Shell scripting</span><span class="entry">AWS</span><span class="entry">Azure</span><span class="entry">PowerShell</span><span class="entry">Git</span>
           </div>
         </div>
-      </section>
-
-      <section id="contact-preview" class="home-panel home-page-panel contact-home-panel alt-panel">
-        <div class="container">
-          <div class="home-panel-layout">
-            <div>
-              <span class="greeting-label">Contact</span>
-              <h2 class="home-panel-title">Let’s build something useful.</h2>
-              <p class="home-panel-copy">
-                Send a message through your email app or use the direct channels on the full contact page.
-              </p>
-              <div class="cta-buttons">
-                <a href="./contact.html" class="btn btn-neon">
-                  <i class="fas fa-envelope"></i> Open Contact Page
-                </a>
-              </div>
-            </div>
-            <div class="contact-form-container home-contact-form">
-              <h3>Send me a Message</h3>
-              <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                  <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control" id="email" name="email" placeholder="your@email.com" required>
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your message here..." required></textarea>
-                </div>
-                <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-                <button type="submit" class="btn btn-neon w-100">
-                  <i class="fas fa-paper-plane"></i> Send Message
-                </button>
-              </form>
-            </div>
+        <div class="holding rise">
+          <h3>Data &amp; ML foundations</h3>
+          <div class="entries">
+            <span class="entry">Python</span><span class="entry">NumPy</span><span class="entry">Pandas</span><span class="entry">Matplotlib</span><span class="entry">scikit-learn</span><span class="entry">PyTorch</span><span class="entry">TensorFlow</span>
           </div>
         </div>
-      </section>
-    </main>
+        <div class="holding rise">
+          <h3>Tools</h3>
+          <div class="entries">
+            <span class="entry">Git</span><span class="entry">.NET</span><span class="entry">Arduino</span><span class="entry">Figma</span><span class="entry">Adobe Suite</span><span class="entry">Blender</span>
+          </div>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="act plain" href="./skills.html">Open the holdings register <svg aria-hidden="true"><use href="#i-right"/></svg></a>
+      </div>
+    </div>
+  </section>
 
-    <footer class="bg-dark text-center text-white py-4">
-      <p>&copy; <span id="currentYear"></span> My Portfolio. All Rights Reserved.</p>
-      <h3>Created by Anthony Mwongela</h3>
-    </footer>
+  <section class="wall-section" id="provenance">
+    <div class="frame">
+      <div class="section-head">
+        <h2>Record</h2>
+        <p>Where the training came from, with the marks as awarded.</p>
+      </div>
+      <div class="ledger">
+        <div class="ledger-row rise">
+          <span class="ledger-no">05a</span>
+          <h3>KCA University</h3>
+          <p class="ledger-note">BSc Software Development, full-time, four years. Awarded <strong>Second Class Upper</strong>.</p>
+        </div>
+        <div class="ledger-row rise">
+          <span class="ledger-no">05b</span>
+          <h3>ALX Africa</h3>
+          <p class="ledger-note">Software Engineering programme, twelve months intensive — <strong>80%</strong>. AI Career Essentials — <strong>85%</strong>.</p>
+        </div>
+        <div class="ledger-row rise">
+          <span class="ledger-no">05c</span>
+          <h3>Makueni Boys High School</h3>
+          <p class="ledger-note">Secondary education. Foundation in science, mathematics and problem solving.</p>
+        </div>
+      </div>
+      <div class="actions">
+        <a class="act plain" href="./education.html">Open the education record <svg aria-hidden="true"><use href="#i-right"/></svg></a>
+      </div>
+    </div>
+  </section>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./script.js"></script>
+  <section class="wall-section lit" id="contact">
+    <div class="frame">
+      <div class="object">
+        <div>
+          <div class="section-head">
+            <h2>Write to him</h2>
+            <p>
+              If you are hiring for frontend or full-stack work, this is the shortest route.
+              The form composes the message and opens it in Gmail for you to send — nothing
+              is submitted to a server, because this site does not have one.
+            </p>
+          </div>
+          <ul class="reach">
+            <li><a class="reach-row" href="mailto:robahdev254@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg><span class="reach-label">Email</span><span class="reach-value">Open a new message</span></a></li>
+            <li><a class="reach-row" href="https://wa.me/254798348149" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-msg"/></svg><span class="reach-label">WhatsApp</span><span class="reach-value">Start a chat</span></a></li>
+            <li><a class="reach-row" href="tel:+254798348149"><svg aria-hidden="true"><use href="#i-phone"/></svg><span class="reach-label">Phone</span><span class="reach-value">Place a call</span></a></li>
+            <li><a class="reach-row" href="https://www.linkedin.com/in/anthony-robert-5a5290227/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-out"/></svg><span class="reach-label">LinkedIn</span><span class="reach-value">anthony-robert-5a5290227</span></a></li>
+          </ul>
+        </div>
+        <div class="stock-area">
+          <h3>Compose a message</h3>
+          <form class="dispatch" id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" autocomplete="name" placeholder="Jane Wanjiru" required>
+            </div>
+            <div class="field">
+              <label for="email">Your email</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="jane@company.co.ke" required>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="The role, the team, and what you need built." required></textarea>
+            </div>
+            <p class="dispatch-status" id="formStatus" role="status" aria-live="polite"></p>
+            <button type="submit" class="act act-ink primary">
+              <svg aria-hidden="true"><use href="#i-mail"/></svg> Open in Gmail, ready to send
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="register">
+  <div class="frame">
+    <div class="register-grid">
+      <div class="register-col">
+        <h2>Repositories</h2>
+        <ul>
+          <li><a href="https://github.com/Robadev254/alx-system_engineering-devops" target="_blank" rel="noopener">alx-system_engineering-devops</a></li>
+          <li><a href="https://github.com/Robadev254/RobadevPortfolio" target="_blank" rel="noopener">RobadevPortfolio</a></li>
+          <li><a href="https://github.com/Robadev254/USERINTERFACE-JAVA" target="_blank" rel="noopener">USERINTERFACE-JAVA</a></li>
+          <li><a href="https://github.com/Robadev254" target="_blank" rel="noopener">github.com/Robadev254</a></li>
+        </ul>
+      </div>
+      <div class="register-col">
+        <h2>Credentials</h2>
+        <ul>
+          <li>BSc Software Development — KCA University</li>
+          <li>Second Class Upper, four years full-time</li>
+          <li>ALX Software Engineering — 80%</li>
+          <li>ALX AI Career Essentials — 85%</li>
+          <li>Makueni Boys High School</li>
+        </ul>
+      </div>
+      <div class="register-col">
+        <h2>Channels</h2>
+        <ul>
+          <li><a href="mailto:robahdev254@gmail.com">Email</a></li>
+          <li><a href="tel:+254798348149">Phone</a></li>
+          <li><a href="https://www.linkedin.com/in/anthony-robert-5a5290227/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://x.com/roba_254" target="_blank" rel="noopener">x.com/roba_254</a></li>
+          <li><a href="https://www.instagram.com/robahdev/" target="_blank" rel="noopener">instagram/robahdev</a></li>
+        </ul>
+      </div>
+      <div class="register-col">
+        <h2>Documents</h2>
+        <ul>
+          <li><a href="./resume-anthony-mwongela.pdf" download>Résumé (PDF)</a></li>
+          <li>Based in Nairobi, Kenya</li>
+          <li>Open to frontend &amp; full-stack roles</li>
+          <li>Available for interview on request</li>
+        </ul>
+      </div>
+      <div class="register-col">
+        <h2>Not recorded</h2>
+        <ul class="ghost">
+          <li>Employment history — <span class="not-recorded">not recorded</span></li>
+          <li>Client engagements — <span class="not-recorded">not recorded</span></li>
+          <li>Live deployment URLs — <span class="not-recorded">not recorded</span></li>
+          <li>Testimonials — <span class="not-recorded">not recorded</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="register-foot">
+      <span>Anthony Mwongela · Software Engineer · Nairobi</span>
+      <span>Catalogued <span id="currentYear">2026</span>. Written by hand — no framework, no build step.</span>
+    </div>
+  </div>
+</footer>
+<script src="./script.js" defer></script>
 </body>
 </html>

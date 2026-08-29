@@ -1,0 +1,32 @@
+[
+  {
+    "file": "about.html",
+    "title": "About — Anthony Mwongela, Software Engineer",
+    "description": "Who Anthony Mwongela is, how he works, and what is documented: BSc Software Development, ALX Software Engineering, and public repositories."
+  },
+  {
+    "file": "whatido.html",
+    "title": "Practice — Anthony Mwongela, Software Engineer",
+    "description": "The six areas Anthony Mwongela takes work in: frontend engineering, backend and APIs, cloud and DevOps, database design, desktop applications, and data foundations."
+  },
+  {
+    "file": "skills.html",
+    "title": "Holdings — Anthony Mwongela, Software Engineer",
+    "description": "The full technical register: languages, frameworks, databases, cloud and DevOps tooling, with the proficiency stated honestly."
+  },
+  {
+    "file": "projects.html",
+    "title": "Works — Anthony Mwongela, Software Engineer",
+    "description": "Three catalogued works with their repositories: ALX System Engineering and DevOps, this portfolio site, and a Java Swing restaurant management application."
+  },
+  {
+    "file": "education.html",
+    "title": "Record — Anthony Mwongela, Software Engineer",
+    "description": "Education and training: KCA University BSc Software Development (Second Class Upper), ALX Africa Software Engineering (80%), AI Career Essentials (85%)."
+  },
+  {
+    "file": "contact.html",
+    "title": "Contact — Anthony Mwongela, Software Engineer",
+    "description": "Reach Anthony Mwongela by email, WhatsApp, phone or LinkedIn. The form composes your message and opens it in Gmail to send."
+  }
+]
