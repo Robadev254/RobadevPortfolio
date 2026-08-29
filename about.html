@@ -1,188 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>About - Anthony Mwongela</title>
-    <link rel="icon" href="./favicon.ico" sizes="any">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Anthony Mwongela, Software Engineer</title>
+  <meta name="description" content="Who Anthony Mwongela is, how he works, and what is documented: BSc Software Development, ALX Software Engineering, and public repositories.">
+  <link rel="icon" href="./favicon.ico" sizes="any">
+  <link rel="preload" href="./fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <nav id="NavPos" class="navbar navbar-expand-lg w-100 modern-navbar">
-      <div class="container-fluid">
-        <a class="navbar-brand neon-brand" href="./index.html">
-          <i class="fas fa-code"></i> Anthony Mwongela
-        </a>
-        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-3 mb-lg-0">
-            <li class="nav-item"><a class="nav-link nav-modern" href="./index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./whatido.html">What I Do</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./skills.html">Skills</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./projects.html">Projects</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./education.html">Education</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./contact.html">Contact</a></li>
-          </ul>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="i-base" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></g>
+    <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15"/><path d="M5.5 13 12 19.5 18.5 13"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 5.5 19.5 12 13 18.5"/></symbol>
+    <symbol id="i-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5H5.5v13.5H19V14"/><path d="M14 4h6v6"/><path d="M20 4l-8.5 8.5"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M12 11v6"/><path d="M9.5 14.5 12 17l2.5-2.5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h4l1.5 4.5-2.5 2a12 12 0 0 0 4.5 4.5l2-2.5L21 13v4a3 3 0 0 1-3.3 3A16 16 0 0 1 4 6.3 3 3 0 0 1 7 3z"/></symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8.5 10.5h7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></symbol>
+  </defs>
+</svg>
+
+
+<a class="skip" href="#record">Skip to the record</a>
+<div class="lamp" aria-hidden="true"></div>
+
+<header class="directory">
+  <div class="directory-inner">
+    <a class="plate" href="./index.html">
+      <span class="plate-name">Anthony Mwongela</span>
+      <span class="plate-sub">Software Engineer · Nairobi</span>
+    </a>
+    <button class="rooms-toggle" id="roomsToggle" aria-expanded="false" aria-controls="rooms">
+      <svg aria-hidden="true"><use href="#i-menu"/></svg> Rooms
+    </button>
+    <nav class="rooms" id="rooms" aria-label="Site rooms">
+      <a class="room" href="./index.html"><span class="room-no">00</span> Wall</a>
+      <a class="room" href="./about.html" aria-current="page"><span class="room-no">01</span> About</a>
+      <a class="room" href="./whatido.html"><span class="room-no">02</span> Practice</a>
+      <a class="room" href="./skills.html"><span class="room-no">03</span> Holdings</a>
+      <a class="room" href="./projects.html"><span class="room-no">04</span> Works</a>
+      <a class="room" href="./education.html"><span class="room-no">05</span> Record</a>
+      <a class="room" href="./contact.html"><span class="room-no">06</span> Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="record">
+<section class="wall-section" id="about">
+    <div class="frame">
+      <div class="section-head">
+        <span class="room-tag">Room 01</span>
+        <h1>About</h1>
+        <p>A software engineer from Nairobi who prefers systems a team can still change six months later.</p>
+      </div>
+
+      <div class="object">
+        <div class="vitrine-slot">
+          <figure class="vitrine vitrine-portrait">
+            <div class="vitrine-plate">
+              <img src="./projectsimages/portrait.jpg" alt="Anthony Mwongela" width="900" height="1125" fetchpriority="high">
+            </div>
+            <figcaption class="vitrine-caption">
+              <span>Anthony Mwongela</span>
+              <span>Object 00</span>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="label-stack">
+          <article class="label rise">
+            <div class="accession"><b>00</b><span>Subject</span></div>
+            <div>
+              <h2>Anthony Mwongela</h2>
+              <div class="medium">
+                <span>Software Engineer</span><span>Nairobi, Kenya</span><span>Full-stack web</span>
+              </div>
+              <p class="curatorial">
+                I came to engineering through a four-year BSc in Software Development at KCA
+                University, then spent twelve months in the ALX Africa Software Engineering
+                programme, where most of the work was Linux, shell and system engineering done
+                task by task rather than in one sitting. The combination is deliberate: I can
+                build the interface, the service behind it, and the environment it runs in.
+              </p>
+              <p class="curatorial">
+                My day-to-day preference is frontend and full-stack web work. I like problems
+                where the constraint is clarity — making a dense screen legible, making a form
+                honest about what it will do, making a layout survive a 320px phone without a
+                second codebase. This site is built to that standard: no framework, no build
+                step, hand-written CSS with a token system, and every interactive element
+                reachable from the keyboard.
+              </p>
+              <p class="curatorial">
+                I am early in my career and I would rather say so than imply otherwise. What I
+                can show you is real: repositories you can read line by line, grades as they
+                were awarded, and an explicit record of what has not happened yet.
+              </p>
+              <div class="provenance">
+                <a href="./projects.html">See the three works <svg aria-hidden="true"><use href="#i-right"/></svg></a>
+                <a href="./resume-anthony-mwongela.pdf" download>Résumé, PDF <svg aria-hidden="true"><use href="#i-file"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="label rise">
+            <div class="accession"><b>00a</b><span>Method</span></div>
+            <div>
+              <h2>How I work</h2>
+              <p class="curatorial">
+                Read the existing code before adding to it. Keep the smallest thing that
+                actually solves the problem. Name things so the next person does not have to
+                ask. Test the edges — empty states, bad input, slow networks — because those
+                are where real users live. Write the accessibility in from the start rather
+                than auditing it in afterwards.
+              </p>
+              <div class="provenance">
+                <span class="not-recorded">Employment history not recorded</span>
+                <span class="not-recorded">Client engagements not recorded</span>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
-    </nav>
+    </div>
+  </section>
 
-    <main>
-      <section class="page-hero about-hero">
-        <div class="stars"></div>
-        <div class="container">
-          <div class="row align-items-center g-5">
-            <div class="col-lg-7">
-              <span class="greeting-label">About me</span>
-              <h1 class="page-title">Software engineer building useful, accessible digital products.</h1>
-              <p class="page-lead">
-                I am Anthony Mwongela, a full-stack developer focused on responsive interfaces, reliable backend systems, and practical cloud-ready engineering.
-              </p>
-              <div class="cta-buttons">
-                <a href="./contact.html" class="btn btn-outline-neon">
-                  <i class="fas fa-paper-plane"></i> Contact Me
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-5 text-lg-end text-center">
-              <div class="profile-glow about-profile">
-                <img src="./projectsimages/boykid254.jpg" alt="Anthony Mwongela" class="profile-img">
-              </div>
-            </div>
-          </div>
+  <section class="wall-section lit" id="standing">
+    <div class="frame">
+      <div class="section-head">
+        <h2>Standing</h2>
+        <p>What is documented, and where to check it.</p>
+      </div>
+      <div class="ledger">
+        <div class="ledger-row rise">
+          <span class="ledger-no">A</span>
+          <h3>Formal qualification</h3>
+          <p class="ledger-note">BSc Software Development, <strong>KCA University</strong>, four years full-time. Awarded Second Class Upper.</p>
         </div>
-      </section>
-
-      <section class="page-section about-story">
-        <div class="container">
-          <div class="section-header text-center">
-            <h2>My Story</h2>
-            <p class="section-subtitle">Career narrative</p>
-          </div>
-          <div class="story-layout">
-            <div class="story-panel">
-              <h3>The Professional Hook</h3>
-              <p>
-                I build web applications that balance clean user experience with maintainable code. My current focus is full-stack development with JavaScript, TypeScript, Next.js, APIs, databases, and cloud workflows.
-              </p>
-              <p>
-                The value I aim to bring is simple: products that people can actually use, teams can confidently maintain, and businesses can keep improving.
-              </p>
-            </div>
-            <div class="story-panel">
-              <h3>How I Got Here</h3>
-              <p>
-                My path has grown through formal software development study at KCA University, hands-on engineering practice through ALX Africa, and project work across web, DevOps, Java GUI applications, and data-focused tooling.
-              </p>
-              <p>
-                Each step has pushed me closer to the kind of engineering I care about most: solving real problems with thoughtful systems, clear communication, and steady iteration.
-              </p>
-            </div>
-            <div class="story-panel">
-              <h3>What I Want Next</h3>
-              <p>
-                I am looking for software engineering opportunities where I can contribute to full-stack, frontend, backend, or cloud-focused products while growing with a team that values quality and learning.
-              </p>
-              <p>
-                I am especially eager to keep improving in scalable application architecture, CI/CD, API development, accessibility, and modern product engineering.
-              </p>
-            </div>
-          </div>
+        <div class="ledger-row rise">
+          <span class="ledger-no">B</span>
+          <h3>Intensive programme</h3>
+          <p class="ledger-note"><strong>ALX Africa</strong> Software Engineering, twelve months — 80%. AI Career Essentials — 85%.</p>
         </div>
-      </section>
-
-      <section class="page-section competencies-section">
-        <div class="container">
-          <div class="section-header text-center">
-            <h2>Core Competencies</h2>
-            <p class="section-subtitle">What I can do</p>
-          </div>
-          <div class="competency-grid">
-            <div class="competency-card">
-              <i class="fas fa-display"></i>
-              <h3>Frontend Engineering</h3>
-              <p>Responsive HTML, CSS, JavaScript, TypeScript, Bootstrap, and Next.js interfaces built for clarity and accessibility.</p>
-            </div>
-            <div class="competency-card">
-              <i class="fas fa-server"></i>
-              <h3>Backend & APIs</h3>
-              <p>RESTful services, database-backed features, PHP, MySQL, PostgreSQL, MongoDB, and server-side integration work.</p>
-            </div>
-            <div class="competency-card">
-              <i class="fas fa-cloud"></i>
-              <h3>Cloud & DevOps</h3>
-              <p>AWS, Azure, Linux, PowerShell, shell scripting, automation, deployment thinking, and infrastructure fundamentals.</p>
-            </div>
-            <div class="competency-card">
-              <i class="fas fa-chart-line"></i>
-              <h3>AI & Data</h3>
-              <p>Python data workflows with NumPy, Pandas, Matplotlib, scikit-learn, PyTorch, and TensorFlow foundations.</p>
-            </div>
-            <div class="competency-card">
-              <i class="fas fa-people-group"></i>
-              <h3>Team Collaboration</h3>
-              <p>Clear communication, structured problem solving, Git-based workflows, and a willingness to learn in public with teammates.</p>
-            </div>
-            <div class="competency-card">
-              <i class="fas fa-pen-nib"></i>
-              <h3>Creative Tools</h3>
-              <p>Figma, Adobe tools, Canva, and Blender experience that helps bridge engineering decisions with visual polish.</p>
-            </div>
-          </div>
+        <div class="ledger-row rise">
+          <span class="ledger-no">C</span>
+          <h3>Public code</h3>
+          <p class="ledger-note">Three public repositories on <strong>github.com/Robadev254</strong> spanning DevOps, web and Java desktop work.</p>
         </div>
-      </section>
-
-      <section class="page-section values-section">
-        <div class="container">
-          <div class="values-layout">
-            <div>
-              <div class="section-header compact-header">
-                <h2>Why Work With Me</h2>
-                <p class="section-subtitle">Values and philosophy</p>
-              </div>
-              <p class="values-copy">
-                I believe good software should be understandable, inclusive, and dependable. I care about clean structure, accessible interfaces, clear documentation, and building in a way that makes the next improvement easier.
-              </p>
-              <p class="values-copy">
-                Outside of code, I enjoy creative digital work, exploring new tools, and learning how design, engineering, and everyday problem solving connect.
-              </p>
-            </div>
-            <div class="cta-panel">
-              <h3>Let's Talk</h3>
-              <p>Open to software engineering roles, collaboration, and technical conversations.</p>
-              <div class="cta-buttons">
-                <a href="./contact.html" class="btn btn-neon">
-                  <i class="fas fa-envelope"></i> Send a Message
-                </a>
-                <a href="https://github.com/Robadev254" target="_blank" rel="noopener" class="btn btn-outline-neon">
-                  <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/anthony-robert-5a5290227/" target="_blank" rel="noopener" class="btn btn-outline-neon">
-                  <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-              </div>
-            </div>
-          </div>
+        <div class="ledger-row rise">
+          <span class="ledger-no">D</span>
+          <h3>Availability</h3>
+          <p class="ledger-note">Open to frontend and full-stack roles, Nairobi or remote. Reachable by email, WhatsApp or LinkedIn.</p>
         </div>
-      </section>
-    </main>
-
-    <footer class="bg-dark text-center text-white py-4">
-      <p>&copy; <span id="currentYear"></span> My Portfolio. All Rights Reserved.</p>
-      <h3>Created by Anthony Mwongela</h3>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
+      </div>
+      <div class="actions">
+        <a class="act primary" href="./contact.html"><svg aria-hidden="true"><use href="#i-mail"/></svg> Get in touch</a>
+        <a class="act plain" href="./education.html">Open the education record <svg aria-hidden="true"><use href="#i-right"/></svg></a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="register">
+  <div class="frame">
+    <div class="register-grid">
+      <div class="register-col">
+        <h2>Repositories</h2>
+        <ul>
+          <li><a href="https://github.com/Robadev254/alx-system_engineering-devops" target="_blank" rel="noopener">alx-system_engineering-devops</a></li>
+          <li><a href="https://github.com/Robadev254/RobadevPortfolio" target="_blank" rel="noopener">RobadevPortfolio</a></li>
+          <li><a href="https://github.com/Robadev254/USERINTERFACE-JAVA" target="_blank" rel="noopener">USERINTERFACE-JAVA</a></li>
+          <li><a href="https://github.com/Robadev254" target="_blank" rel="noopener">github.com/Robadev254</a></li>
+        </ul>
+      </div>
+      <div class="register-col">
+        <h2>Credentials</h2>
+        <ul>
+          <li>BSc Software Development — KCA University</li>
+          <li>Second Class Upper, four years full-time</li>
+          <li>ALX Software Engineering — 80%</li>
+          <li>ALX AI Career Essentials — 85%</li>
+          <li>Makueni Boys High School</li>
+        </ul>
+      </div>
+      <div class="register-col">
+        <h2>Channels</h2>
+        <ul>
+          <li><a href="mailto:robahdev254@gmail.com">robahdev254@gmail.com</a></li>
+          <li><a href="tel:+254798348149">+254 798 348 149</a></li>
+          <li><a href="https://www.linkedin.com/in/anthony-robert-5a5290227/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://x.com/roba_254" target="_blank" rel="noopener">x.com/roba_254</a></li>
+          <li><a href="https://www.instagram.com/robahdev/" target="_blank" rel="noopener">instagram/robahdev</a></li>
+        </ul>
+      </div>
+      <div class="register-col">
+        <h2>Documents</h2>
+        <ul>
+          <li><a href="./resume-anthony-mwongela.pdf" download>Résumé (PDF)</a></li>
+          <li>Based in Nairobi, Kenya</li>
+          <li>Open to frontend &amp; full-stack roles</li>
+          <li>Available for interview on request</li>
+        </ul>
+      </div>
+      <div class="register-col">
+        <h2>Not recorded</h2>
+        <ul class="ghost">
+          <li>Employment history — <span class="not-recorded">not recorded</span></li>
+          <li>Client engagements — <span class="not-recorded">not recorded</span></li>
+          <li>Live deployment URLs — <span class="not-recorded">not recorded</span></li>
+          <li>Testimonials — <span class="not-recorded">not recorded</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="register-foot">
+      <span>Anthony Mwongela · Software Engineer · Nairobi</span>
+      <span>Catalogued <span id="currentYear">2026</span>. Written by hand — no framework, no build step.</span>
+    </div>
+  </div>
+</footer>
+<script src="./script.js" defer></script>
 </body>
 </html>

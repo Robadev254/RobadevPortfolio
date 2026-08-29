@@ -30,3 +30,11 @@ desktop.ini
 # Local scratch files
 *.tmp
 *.temp
+
+# Machine-local agent settings (launch.json and serve.cjs are shared)
+.claude/settings.local.json
+
+# Design-process scratch; build-pages.cjs, pages.json and partials/ are kept
+.impeccable/decision-payload.json
+.impeccable/questions/
+.impeccable/refs/

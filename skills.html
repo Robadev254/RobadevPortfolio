@@ -1,118 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Skills - Anthony Mwongela</title>
-    <link rel="icon" href="./favicon.ico" sizes="any">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Holdings — Anthony Mwongela, Software Engineer</title>
+  <meta name="description" content="The full technical register: languages, frameworks, databases, cloud and DevOps tooling, with the proficiency stated honestly.">
+  <link rel="icon" href="./favicon.ico" sizes="any">
+  <link rel="preload" href="./fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <nav id="NavPos" class="navbar navbar-expand-lg w-100 modern-navbar">
-      <div class="container-fluid">
-        <a class="navbar-brand neon-brand" href="./index.html"><i class="fas fa-code"></i> Anthony Mwongela</a>
-        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-3 mb-lg-0">
-            <li class="nav-item"><a class="nav-link nav-modern" href="./index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./about.html">About</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./whatido.html">What I Do</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./skills.html">Skills</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./projects.html">Projects</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./education.html">Education</a></li>
-            <li class="nav-item"><a class="nav-link nav-modern" href="./contact.html">Contact</a></li>
-          </ul>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="i-base" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></g>
+    <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v15"/><path d="M5.5 13 12 19.5 18.5 13"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 5.5 19.5 12 13 18.5"/></symbol>
+    <symbol id="i-out" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10 5H5.5v13.5H19V14"/><path d="M14 4h6v6"/><path d="M20 4l-8.5 8.5"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M12 11v6"/><path d="M9.5 14.5 12 17l2.5-2.5"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h4l1.5 4.5-2.5 2a12 12 0 0 0 4.5 4.5l2-2.5L21 13v4a3 3 0 0 1-3.3 3A16 16 0 0 1 4 6.3 3 3 0 0 1 7 3z"/></symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8.5 10.5h7"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></symbol>
+  </defs>
+</svg>
+
+
+<a class="skip" href="#record">Skip to the record</a>
+<div class="lamp" aria-hidden="true"></div>
+
+<header class="directory">
+  <div class="directory-inner">
+    <a class="plate" href="./index.html">
+      <span class="plate-name">Anthony Mwongela</span>
+      <span class="plate-sub">Software Engineer · Nairobi</span>
+    </a>
+    <button class="rooms-toggle" id="roomsToggle" aria-expanded="false" aria-controls="rooms">
+      <svg aria-hidden="true"><use href="#i-menu"/></svg> Rooms
+    </button>
+    <nav class="rooms" id="rooms" aria-label="Site rooms">
+      <a class="room" href="./index.html"><span class="room-no">00</span> Wall</a>
+      <a class="room" href="./about.html"><span class="room-no">01</span> About</a>
+      <a class="room" href="./whatido.html"><span class="room-no">02</span> Practice</a>
+      <a class="room" href="./skills.html" aria-current="page"><span class="room-no">03</span> Holdings</a>
+      <a class="room" href="./projects.html"><span class="room-no">04</span> Works</a>
+      <a class="room" href="./education.html"><span class="room-no">05</span> Record</a>
+      <a class="room" href="./contact.html"><span class="room-no">06</span> Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="record">
+<section class="wall-section" id="holdings">
+    <div class="frame">
+      <div class="section-head">
+        <span class="room-tag">Room 03</span>
+        <h1>Holdings</h1>
+        <p>The complete technical register, grouped as I actually use it and marked with how deep the use goes. Nothing here is aspirational.</p>
+      </div>
+
+      <div class="holdings">
+        <div class="holding rise">
+          <h2>Frontend</h2>
+          <div class="entries">
+            <span class="entry">HTML5</span>
+            <span class="entry">CSS3</span>
+            <span class="entry">JavaScript (ES2020+)</span>
+            <span class="entry">TypeScript</span>
+            <span class="entry">Next.js</span>
+            <span class="entry">Bootstrap</span>
+            <span class="entry">jQuery</span>
+            <span class="entry">Responsive layout</span>
+            <span class="entry">Accessibility (WCAG AA)</span>
+          </div>
+        </div>
+
+        <div class="holding rise">
+          <h2>Backend</h2>
+          <div class="entries">
+            <span class="entry">PHP</span>
+            <span class="entry">RESTful APIs</span>
+            <span class="entry">Server-side validation</span>
+            <span class="entry">Apache</span>
+            <span class="entry">Authentication flows</span>
+          </div>
+        </div>
+
+        <div class="holding rise">
+          <h2>Data stores</h2>
+          <div class="entries">
+            <span class="entry">MySQL</span>
+            <span class="entry">PostgreSQL</span>
+            <span class="entry">MongoDB</span>
+            <span class="entry">Schema design</span>
+            <span class="entry">Indexing</span>
+          </div>
+        </div>
+
+        <div class="holding rise">
+          <h2>Cloud &amp; DevOps</h2>
+          <div class="entries">
+            <span class="entry">Linux</span>
+            <span class="entry">Bash / shell scripting</span>
+            <span class="entry">SSH &amp; firewalls</span>
+            <span class="entry">Web server config</span>
+            <span class="entry">Load balancing</span>
+            <span class="entry">AWS</span>
+            <span class="entry">Azure</span>
+            <span class="entry">PowerShell</span>
+          </div>
+        </div>
+
+        <div class="holding rise">
+          <h2>Languages</h2>
+          <div class="entries">
+            <span class="entry">JavaScript</span>
+            <span class="entry">TypeScript</span>
+            <span class="entry">Python</span>
+            <span class="entry">Java</span>
+            <span class="entry">PHP</span>
+            <span class="entry">SQL</span>
+            <span class="entry">Bash</span>
+          </div>
+        </div>
+
+        <div class="holding rise">
+          <h2>Data &amp; ML foundations</h2>
+          <div class="entries">
+            <span class="entry">NumPy</span>
+            <span class="entry">Pandas</span>
+            <span class="entry">Matplotlib</span>
+            <span class="entry">scikit-learn</span>
+            <span class="entry">PyTorch (intro)</span>
+            <span class="entry">TensorFlow (intro)</span>
+          </div>
+        </div>
+
+        <div class="holding rise">
+          <h2>Tooling</h2>
+          <div class="entries">
+            <span class="entry">Git</span>
+            <span class="entry">GitHub</span>
+            <span class="entry">.NET</span>
+            <span class="entry">Arduino</span>
+            <span class="entry">Figma</span>
+            <span class="entry">Adobe Suite</span>
+            <span class="entry">Blender</span>
+          </div>
+        </div>
+
+        <div class="holding rise">
+          <h2>Not recorded</h2>
+          <div class="entries">
+            <span class="entry"><span class="not-recorded">Framework used in production at scale</span></span>
+            <span class="entry"><span class="not-recorded">Team lead experience</span></span>
+            <span class="entry"><span class="not-recorded">Certification beyond ALX &amp; KCA</span></span>
+          </div>
         </div>
       </div>
-    </nav>
 
-    <main>
-      <section class="page-hero">
-        <div class="stars"></div>
-        <div class="container">
-          <span class="greeting-label">Technologies and tools</span>
-          <h1 class="page-title">Skills</h1>
-          <p class="page-lead">A practical stack for building interfaces, APIs, databases, automation, cloud workflows, and data experiments.</p>
-        </div>
-      </section>
-
-      <section id="skills" class="skills-section standalone-section">
-        <div class="container">
-          <div class="section-header text-center">
-            <h2>Tech Stack</h2>
-            <p class="section-subtitle">Core tools</p>
-          </div>
-
-          <div class="skills-grid">
-            <div class="skill-category">
-              <h4 class="category-title">Frontend</h4>
-              <div class="skill-items">
-                <span class="skill-badge">HTML5</span>
-                <span class="skill-badge">CSS3</span>
-                <span class="skill-badge">JavaScript</span>
-                <span class="skill-badge">TypeScript</span>
-                <span class="skill-badge">Next.js</span>
-                <span class="skill-badge">Bootstrap</span>
-                <span class="skill-badge">jQuery</span>
-                <span class="skill-badge">Responsive Design</span>
-              </div>
-            </div>
-            <div class="skill-category">
-              <h4 class="category-title">Backend & Databases</h4>
-              <div class="skill-items">
-                <span class="skill-badge">TypeScript</span>
-                <span class="skill-badge">PHP</span>
-                <span class="skill-badge">MySQL</span>
-                <span class="skill-badge">PostgreSQL</span>
-                <span class="skill-badge">MongoDB</span>
-                <span class="skill-badge">Apache</span>
-                <span class="skill-badge">RESTful APIs</span>
-              </div>
-            </div>
-            <div class="skill-category">
-              <h4 class="category-title">Cloud & DevOps</h4>
-              <div class="skill-items">
-                <span class="skill-badge">AWS</span>
-                <span class="skill-badge">Azure</span>
-                <span class="skill-badge">PowerShell</span>
-                <span class="skill-badge">Linux</span>
-                <span class="skill-badge">Shell Scripting</span>
-              </div>
-            </div>
-            <div class="skill-category">
-              <h4 class="category-title">AI & Data Science</h4>
-              <div class="skill-items">
-                <span class="skill-badge">TensorFlow</span>
-                <span class="skill-badge">PyTorch</span>
-                <span class="skill-badge">Scikit-learn</span>
-                <span class="skill-badge">NumPy</span>
-                <span class="skill-badge">Pandas</span>
-                <span class="skill-badge">Matplotlib</span>
-              </div>
-            </div>
-            <div class="skill-category">
-              <h4 class="category-title">Tools & Frameworks</h4>
-              <div class="skill-items">
-                <span class="skill-badge">Git</span>
-                <span class="skill-badge">.NET</span>
-                <span class="skill-badge">Arduino</span>
-                <span class="skill-badge">Figma</span>
-                <span class="skill-badge">Adobe Suite</span>
-                <span class="skill-badge">Blender</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="bg-dark text-center text-white py-4">
-      <p>&copy; <span id="currentYear"></span> My Portfolio. All Rights Reserved.</p>
-      <h3>Created by Anthony Mwongela</h3>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
+      <div class="actions">
+        <a class="act primary" href="./projects.html"><svg aria-hidden="true"><use href="#i-right"/></svg> See where these are used</a>
+        <a class="act plain" href="./resume-anthony-mwongela.pdf" download><svg aria-hidden="true"><use href="#i-file"/></svg> Résumé, PDF</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="register">
+  <div class="frame">
+    <div class="register-grid">
+      <div class="register-col">
+        <h2>Repositories</h2>
+        <ul>
+          <li><a href="https://github.com/Robadev254/alx-system_engineering-devops" target="_blank" rel="noopener">alx-system_engineering-devops</a></li>
+          <li><a href="https://github.com/Robadev254/RobadevPortfolio" target="_blank" rel="noopener">RobadevPortfolio</a></li>
+          <li><a href="https://github.com/Robadev254/USERINTERFACE-JAVA" target="_blank" rel="noopener">USERINTERFACE-JAVA</a></li>
+          <li><a href="https://github.com/Robadev254" target="_blank" rel="noopener">github.com/Robadev254</a></li>
+        </ul>
+      </div>
+      <div class="register-col">
+        <h2>Credentials</h2>
+        <ul>
+          <li>BSc Software Development — KCA University</li>
+          <li>Second Class Upper, four years full-time</li>
+          <li>ALX Software Engineering — 80%</li>
+          <li>ALX AI Career Essentials — 85%</li>
+          <li>Makueni Boys High School</li>
+        </ul>
+      </div>
+      <div class="register-col">
+        <h2>Channels</h2>
+        <ul>
+          <li><a href="mailto:robahdev254@gmail.com">robahdev254@gmail.com</a></li>
+          <li><a href="tel:+254798348149">+254 798 348 149</a></li>
+          <li><a href="https://www.linkedin.com/in/anthony-robert-5a5290227/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://x.com/roba_254" target="_blank" rel="noopener">x.com/roba_254</a></li>
+          <li><a href="https://www.instagram.com/robahdev/" target="_blank" rel="noopener">instagram/robahdev</a></li>
+        </ul>
+      </div>
+      <div class="register-col">
+        <h2>Documents</h2>
+        <ul>
+          <li><a href="./resume-anthony-mwongela.pdf" download>Résumé (PDF)</a></li>
+          <li>Based in Nairobi, Kenya</li>
+          <li>Open to frontend &amp; full-stack roles</li>
+          <li>Available for interview on request</li>
+        </ul>
+      </div>
+      <div class="register-col">
+        <h2>Not recorded</h2>
+        <ul class="ghost">
+          <li>Employment history — <span class="not-recorded">not recorded</span></li>
+          <li>Client engagements — <span class="not-recorded">not recorded</span></li>
+          <li>Live deployment URLs — <span class="not-recorded">not recorded</span></li>
+          <li>Testimonials — <span class="not-recorded">not recorded</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="register-foot">
+      <span>Anthony Mwongela · Software Engineer · Nairobi</span>
+      <span>Catalogued <span id="currentYear">2026</span>. Written by hand — no framework, no build step.</span>
+    </div>
+  </div>
+</footer>
+<script src="./script.js" defer></script>
 </body>
 </html>

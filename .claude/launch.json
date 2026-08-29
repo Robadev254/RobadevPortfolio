@@ -1,0 +1,16 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "impeccable-decision",
+      "url": "http://127.0.0.1:13145",
+      "port": 13145
+    },
+    {
+      "name": "portfolio",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [".claude/serve.cjs", "4173"],
+      "port": 4173
+    }
+  ]
+}
