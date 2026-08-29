@@ -31,8 +31,11 @@ desktop.ini
 *.tmp
 *.temp
 
-# Machine-local agent settings (launch.json and serve.cjs are shared)
-.claude/settings.local.json
+# Claude Code / agent files: local settings, preview config, session notes
+.claude/
+CLAUDE.md
+.claude.json
+.mcp.json
 
 # Design-process scratch; build-pages.cjs, pages.json and partials/ are kept
 .impeccable/decision-payload.json
