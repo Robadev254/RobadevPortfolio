@@ -34,31 +34,32 @@
 /* --- Tokens ----------------------------------------------- */
 
 :root {
-  /* wall */
-  --wall: #12251e;
-  --wall-lit: #173126;
-  --wall-deep: #0c1a15;
-  --poche: #071310;
-  /* label stock */
-  --stock: #fbfaf7;
-  --stock-edge: #e4e0d4;
-  --ink: #14140f;
-  --ink-soft: #5b584d;
-  --ink-faint: #726f60;
-  /* on wall */
-  --on-wall: #edf2ec;
-  --on-wall-soft: #a9c0b4;
-  --on-wall-faint: #86a094;
-  --rule-wall: #2d4b3e;
-  --rule-stock: #d3cec0;
-  /* lamp — the only saturated accent on the site */
-  --brass: #c8942f;
-  --brass-lit: #ebc87e;
-  --brass-deep: #8f6412;
+  --wall: #0b0d10;
+  --wall-lit: #11161b;
+  --wall-deep: #07090d;
+  --poche: #06080b;
 
-  --lamp-y: 40vh;
+  --stock: #f7f3ee;
+  --stock-edge: #e7dfd1;
+  --ink: #111111;
+  --ink-soft: #3d3b37;
+  --ink-faint: #6d6862;
 
-  /* rhythm, 4px base */
+  --on-wall: #edf3ef;
+  --on-wall-soft: #bfd0c8;
+  --on-wall-faint: #90a79d;
+  --rule-wall: rgba(170, 184, 177, 0.18);
+  --rule-stock: rgba(17, 17, 17, 0.12);
+
+  --accent: #ff6a2b;
+  --accent-strong: #ff8b5b;
+  --accent-deep: #d85413;
+  --accent-soft: rgba(255, 106, 43, 0.12);
+  --electric: #7ef5d5;
+  --shadow: rgba(255, 106, 43, 0.25);
+
+  --lamp-y: 30vh;
+
   --s1: 0.25rem;
   --s2: 0.5rem;
   --s3: 0.75rem;
@@ -93,7 +94,9 @@ html {
 
 body {
   margin: 0;
-  background: var(--wall);
+  background:
+    radial-gradient(circle at top, rgba(255, 106, 43, 0.13), transparent 20%),
+    linear-gradient(180deg, var(--wall) 0%, var(--wall-deep) 100%);
   color: var(--on-wall);
   font-family: 'Archivo', system-ui, sans-serif;
   font-size: 1rem;
@@ -259,8 +262,8 @@ main {
   position: sticky;
   top: 0;
   z-index: 40;
-  background: color-mix(in srgb, var(--wall-deep) 92%, transparent);
-  backdrop-filter: blur(8px) saturate(140%);
+  background: rgba(7, 9, 12, 0.78);
+  backdrop-filter: blur(10px) saturate(180%);
   border-bottom: 1px solid var(--rule-wall);
 }
 
@@ -395,6 +398,16 @@ main {
   font-stretch: 96%;
 }
 
+.room-tag {
+  display: inline-block;
+  margin-bottom: var(--s3);
+  font-size: 0.585rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+}
+
 /* Inner rooms are numbered like the directory, so a visitor always knows
    which part of the collection they are standing in. */
 .room-tag {
@@ -451,17 +464,27 @@ main {
 }
 
 .identity h1 {
-  font-size: clamp(2.5rem, 7.1vw, 5.75rem);
+  font-size: clamp(2.8rem, 7vw, 6.6rem);
   font-stretch: 118%;
-  font-weight: 700;
-  letter-spacing: -0.038em;
-  line-height: 0.94;
+  font-weight: 850;
+  letter-spacing: -0.06em;
+  line-height: 0.8;
   text-transform: uppercase;
+  text-wrap: balance;
+  background: linear-gradient(180deg, #f5f4f0 0%, #dfe9df 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .identity h1 .surname {
   display: block;
-  color: var(--brass-lit);
+  color: var(--accent-strong);
+  background: linear-gradient(135deg, var(--accent-strong), #ffd2a8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 30px rgba(255, 138, 61, 0.2);
 }
 
 .spec {
@@ -472,6 +495,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
   gap: var(--s4) var(--s5);
+  background: linear-gradient(90deg, rgba(255, 106, 0, 0.03), transparent 50%);
 }
 
 .spec div {
@@ -517,18 +541,19 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-  padding: 0.8rem 1.25rem;
-  font-size: 0.75rem;
-  font-weight: 660;
-  letter-spacing: 0.13em;
+  padding: 0.92rem 1.45rem;
+  font-size: 0.7rem;
+  font-weight: 760;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   text-decoration: none;
-  border: 1px solid var(--brass-deep);
-  color: var(--brass-lit);
-  background: transparent;
+  border: 1px solid rgba(255, 138, 61, 0.6);
+  color: var(--accent-strong);
+  background: rgba(255, 106, 43, 0.04);
+  border-radius: 999px;
   cursor: pointer;
-  transition: background 0.22s var(--ease), color 0.22s var(--ease),
-    border-color 0.22s var(--ease), box-shadow 0.22s var(--ease);
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease),
+    background 0.2s var(--ease), border-color 0.2s var(--ease), color 0.2s var(--ease);
 }
 
 .act svg {
@@ -538,31 +563,34 @@ main {
 }
 
 .act:hover {
-  background: var(--brass);
-  border-color: var(--brass);
-  color: #16120a;
-  box-shadow: 0 6px 22px -10px rgba(200, 148, 47, 0.85);
+  transform: translateY(-1px);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #160f09;
+  box-shadow: 0 16px 28px -18px rgba(255, 106, 0, 0.85);
 }
 
 .act.primary {
-  background: var(--brass);
-  border-color: var(--brass);
-  color: #16120a;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+  border-color: var(--accent);
+  color: #17110d;
+  box-shadow: 0 20px 30px -16px rgba(255, 106, 0, 0.8);
 }
 
 .act.primary:hover {
-  background: var(--brass-lit);
-  border-color: var(--brass-lit);
+  background: linear-gradient(135deg, var(--accent-strong) 0%, #ffb076 100%);
+  border-color: var(--accent-strong);
 }
 
 .act.plain {
   border-color: var(--rule-wall);
   color: var(--on-wall-soft);
+  background: transparent;
 }
 
 .act.plain:hover {
-  background: transparent;
-  border-color: var(--on-wall-faint);
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.28);
   color: var(--on-wall);
   box-shadow: none;
 }
@@ -634,10 +662,11 @@ main {
 .vitrine {
   position: relative;
   padding: clamp(0.5rem, 1.2vw, 0.875rem);
-  background: linear-gradient(160deg, #1b3529, #0e2019);
-  border: 1px solid var(--rule-wall);
-  box-shadow: 0 30px 60px -34px rgba(4, 12, 9, 0.9),
-    0 2px 0 rgba(233, 200, 126, 0.07) inset;
+  background: linear-gradient(160deg, rgba(255, 106, 43, 0.08), rgba(11, 13, 16, 0.94));
+  border: 1px solid rgba(255, 138, 61, 0.24);
+  border-radius: 1.25rem;
+  box-shadow: 0 30px 60px -34px rgba(255, 106, 43, 0.25),
+    0 0 0 1px rgba(255, 138, 61, 0.1) inset;
 }
 
 .vitrine-plate {
@@ -691,15 +720,20 @@ main {
 /* --- Label: the object label, white stock on the wall -------- */
 
 .label {
-  background: var(--stock);
+  background: linear-gradient(180deg, #fffdf9 0%, #f4efe7 100%);
   color: var(--ink);
-  border: 1px solid var(--stock-edge);
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  border-radius: 1.1rem;
   padding: clamp(1.25rem, 2.2vw, 1.75rem);
   display: grid;
   grid-template-columns: 3.25rem minmax(0, 1fr);
   gap: 0 var(--s5);
-  box-shadow: 0 20px 44px -30px rgba(4, 12, 9, 0.75);
-  transition: box-shadow 0.4s var(--ease), border-color 0.4s var(--ease);
+  box-shadow: 0 24px 46px -30px rgba(255, 106, 43, 0.38);
+  transition: box-shadow 0.4s var(--ease), border-color 0.4s var(--ease), transform 0.3s var(--ease);
+}
+
+.label:hover {
+  transform: translateY(-2px);
 }
 
 .label.lit {
@@ -745,7 +779,7 @@ main {
   align-items: baseline;
   gap: 0.3rem 0.55rem;
   font-size: 0.6875rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.11em;
   text-transform: uppercase;
   color: var(--ink-soft);
@@ -890,11 +924,12 @@ main {
 /* --- Stock area: a white panel set into the wall ------------ */
 
 .stock-area {
-  background: var(--stock);
+  background: linear-gradient(180deg, #f8f4ee 0%, #f1eae0 100%);
   color: var(--ink);
   border: 1px solid var(--stock-edge);
+  border-radius: 1.5rem;
   padding: clamp(1.5rem, 3vw, var(--s7));
-  box-shadow: 0 26px 56px -34px rgba(4, 12, 9, 0.8);
+  box-shadow: 0 26px 56px -34px rgba(255, 106, 43, 0.3);
 }
 
 .stock-area h2,
@@ -1060,7 +1095,7 @@ main {
   grid-template-columns: 1.75rem minmax(0, 9rem) minmax(0, 1fr);
   align-items: center;
   gap: var(--s4);
-  padding-block: var(--s4);
+  padding: var(--s4) 0.5rem var(--s4) 0;
   border-bottom: 1px solid var(--rule-wall);
   width: 100%;
   background: none;
@@ -1070,11 +1105,13 @@ main {
   text-align: left;
   text-decoration: none;
   cursor: pointer;
-  transition: background 0.25s var(--ease);
+  transition: background 0.25s var(--ease), transform 0.25s var(--ease), padding-left 0.25s var(--ease);
 }
 
 .reach-row:hover {
-  background: rgba(233, 200, 126, 0.05);
+  background: rgba(255, 106, 43, 0.04);
+  padding-left: 0.45rem;
+  transform: translateX(2px);
 }
 
 .reach-row svg {
