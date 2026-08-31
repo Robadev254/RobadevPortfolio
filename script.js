@@ -1,345 +1,198 @@
-/* The Catalogue Wall — gallery behaviour.
-   One signature interaction: a single continuous lamp band lies across the wall
-   at reading height. Everything that reacts to the pointer or the scroll reads
-   that one light source; nothing lights itself. */
+/**
+ * Anthony Mwongela Portfolio — Interactive Engine
+ * Responsive Navigation, Project Inquiry Builder, Copy Feedback & Scroll Reveals
+ */
 
-document.documentElement.classList.add('js');
+document.addEventListener('DOMContentLoaded', () => {
+  initNavigation();
+  initScrollAnimations();
+  initContactComposer();
+  initClipboardButtons();
+  initYearStamp();
+});
 
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+/* --- Mobile Navigation & Accessibility --------------------- */
+function initNavigation() {
+  const toggleBtn = document.getElementById('navToggle');
+  const navMenu = document.getElementById('navMenu');
 
-/* --- Rooms: which page am I standing in --------------------- */
+  if (!toggleBtn || !navMenu) return;
 
-function getPageName(pathname) {
-  const page = pathname.split('/').filter(Boolean).pop();
-  return page || 'index.html';
+  function toggleMenu(open) {
+    const shouldOpen = typeof open === 'boolean' ? open : !navMenu.classList.contains('open');
+    navMenu.classList.toggle('open', shouldOpen);
+    toggleBtn.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (navMenu.classList.contains('open') && !navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+      toggleMenu(false);
+    }
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+      toggleMenu(false);
+      toggleBtn.focus();
+    }
+  });
+
+  // Close on link click
+  navMenu.querySelectorAll('.nav-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        toggleMenu(false);
+      }
+    });
+  });
 }
 
-function scrollToElement(selector) {
-  const targetElement = document.querySelector(selector);
+/* --- Scroll Reveal Animations ----------------------------- */
+function initScrollAnimations() {
+  const animatedElements = document.querySelectorAll('.fade-in-up');
+  if (!animatedElements.length) return;
 
-  if (targetElement) {
-    targetElement.scrollIntoView({
-      behavior: reduceMotion.matches ? 'auto' : 'smooth',
-      block: 'start'
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -40px 0px',
+      }
+    );
+
+    animatedElements.forEach((el) => observer.observe(el));
+  } else {
+    // Fallback if IntersectionObserver is not supported or reduced motion is preferred
+    animatedElements.forEach((el) => el.classList.add('visible'));
+  }
+}
+
+/* --- Interactive Contact Form & Inquiry Composer ----------- */
+function initContactComposer() {
+  const form = document.getElementById('inquiryForm');
+  const pills = document.querySelectorAll('.topic-pill-btn');
+  const messageInput = document.getElementById('inquiryMessage');
+  const topicInput = document.getElementById('inquiryTopic');
+
+  const topicTemplates = {
+    'Full-Stack Web App':
+      "Hi Anthony,\n\nI'm looking to build a full-stack web application. Here is an overview of what we need:\n- Project Goal: \n- Target Timeline: \n- Preferred Tech Stack / Requirements: \n\nLet's connect to discuss scope and timelines.",
+    'Frontend Redesign':
+      "Hi Anthony,\n\nWe have an existing website/application that needs a modern, polished, and accessible frontend redesign.\n- Current site/app link: \n- Key improvements needed: \n- Timeline: \n\nLooking forward to hearing your thoughts.",
+    'API & Backend System':
+      "Hi Anthony,\n\nI'm reaching out regarding backend architecture / API design.\n- Requirements: \n- Database & Infrastructure: \n- Timeline: \n\nLet me know your availability for a quick discovery chat.",
+    'Full-Time / Contract Role':
+      "Hi Anthony,\n\nI came across your portfolio and would love to discuss an engineering opportunity with our team.\n- Role Title: Software Engineer\n- Company / Team: \n- Location / Remote status: \n\nWhen would be a good time for a brief call?",
+    'General Consultation':
+      "Hi Anthony,\n\nI'd like to schedule a technical consultation to discuss:\n- Topic: \n- Questions / Context: \n\nBest regards,",
+  };
+
+  if (pills.length && messageInput) {
+    pills.forEach((pill) => {
+      pill.addEventListener('click', () => {
+        pills.forEach((p) => p.classList.remove('active'));
+        pill.classList.add('active');
+
+        const selectedTopic = pill.getAttribute('data-topic') || pill.textContent.trim();
+        if (topicInput) topicInput.value = selectedTopic;
+
+        // Auto-fill template if message is empty or matches another template
+        const currentVal = messageInput.value.trim();
+        const isTemplate = Object.values(topicTemplates).some((t) => t.trim() === currentVal);
+
+        if (!currentVal || isTemplate) {
+          messageInput.value = topicTemplates[selectedTopic] || '';
+        }
+      });
+    });
+  }
+
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('inquiryName')?.value.trim() || '';
+      const email = document.getElementById('inquiryEmail')?.value.trim() || '';
+      const topic = topicInput?.value || document.querySelector('.topic-pill-btn.active')?.textContent.trim() || 'General Inquiry';
+      const message = messageInput?.value.trim() || '';
+
+      if (!message) {
+        alert('Please enter a brief message before submitting.');
+        return;
+      }
+
+      const subject = encodeURIComponent(`[Portfolio Inquiry] ${topic} — from ${name || 'Client'}`);
+      const body = encodeURIComponent(`From: ${name} (${email})\nTopic: ${topic}\n\n${message}`);
+
+      // Compose Gmail URL
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=robahdev254@gmail.com&su=${subject}&body=${body}`;
+      const mailtoUrl = `mailto:robahdev254@gmail.com?subject=${subject}&body=${body}`;
+
+      // Try opening Gmail compose in new tab; fallback to standard mailto
+      const win = window.open(gmailUrl, '_blank');
+      if (!win || win.closed || typeof win.closed === 'undefined') {
+        window.location.href = mailtoUrl;
+      }
+
+      const statusEl = document.getElementById('formStatus');
+      if (statusEl) {
+        statusEl.innerHTML = `
+          <div style="margin-top: 1rem; padding: 0.85rem; border-radius: 8px; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); color: #6ee7b7; font-size: 0.9rem;">
+            ✓ Opening email compose. If your browser blocked the window, <a href="${mailtoUrl}" style="text-decoration: underline; color: #fff; font-weight: bold;">click here to open in your mail app</a>.
+          </div>
+        `;
+      }
     });
   }
 }
 
-const currentPage = getPageName(window.location.pathname);
+/* --- Clipboard Copy Actions ------------------------------- */
+function initClipboardButtons() {
+  const copyButtons = document.querySelectorAll('[data-copy]');
 
-document.querySelectorAll('.room').forEach(link => {
-  const href = link.getAttribute('href');
+  copyButtons.forEach((btn) => {
+    btn.addEventListener('click', async (e) => {
+      e.preventDefault();
+      const textToCopy = btn.getAttribute('data-copy');
+      if (!textToCopy) return;
 
-  if (!href) {
-    return;
-  }
+      try {
+        await navigator.clipboard.writeText(textToCopy);
+        const originalText = btn.innerHTML;
+        btn.innerHTML = `<span>Copied! ✓</span>`;
+        btn.style.color = 'var(--primary-light)';
 
-  const targetUrl = new URL(href, window.location.href);
-  const targetPage = getPageName(targetUrl.pathname);
-  const isSamePage = targetPage === currentPage;
-
-  if (isSamePage && !targetUrl.hash) {
-    link.classList.add('here');
-    link.setAttribute('aria-current', 'page');
-  }
-
-  link.addEventListener('click', function (event) {
-    if (isSamePage && targetUrl.hash) {
-      event.preventDefault();
-      scrollToElement(targetUrl.hash);
-      closeRooms();
-    }
-  });
-});
-
-/* --- Rooms drawer (narrow viewports) ------------------------ */
-
-const roomsToggle = document.getElementById('roomsToggle');
-const rooms = document.getElementById('rooms');
-
-function closeRooms() {
-  if (roomsToggle && rooms) {
-    roomsToggle.setAttribute('aria-expanded', 'false');
-    rooms.classList.remove('open');
-  }
-}
-
-if (roomsToggle && rooms) {
-  roomsToggle.addEventListener('click', function () {
-    const open = roomsToggle.getAttribute('aria-expanded') === 'true';
-    roomsToggle.setAttribute('aria-expanded', String(!open));
-    rooms.classList.toggle('open', !open);
-  });
-
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-      closeRooms();
-    }
-  });
-}
-
-/* --- The lamp: the one light on the wall -------------------- */
-
-const lamp = document.querySelector('.lamp');
-const labels = Array.from(document.querySelectorAll('.label'));
-const plates = Array.from(document.querySelectorAll('.vitrine-plate'));
-
-let lampY = window.innerHeight * 0.4;
-let pointerY = null;
-let lampFrame = 0;
-
-function paintLamp() {
-  lampFrame = 0;
-
-  const viewport = window.innerHeight;
-  const scrolled = window.scrollY;
-  const documentHeight = Math.max(
-    document.documentElement.scrollHeight - viewport,
-    1
-  );
-  /* With no pointer, the band drifts from a third down the wall to two thirds
-     across the length of the document, so it reads as one lamp being walked
-     past rather than a per-card effect. */
-  const drift = Math.min(Math.max(scrolled / documentHeight, 0), 1);
-  const target = pointerY === null ? viewport * (0.34 + drift * 0.32) : pointerY;
-
-  lampY += (target - lampY) * 0.16;
-
-  if (lamp) {
-    lamp.style.setProperty('--lamp-y', `${lampY.toFixed(1)}px`);
-  }
-
-  /* Label stock lights when the band crosses it. */
-  labels.forEach(label => {
-    const box = label.getBoundingClientRect();
-    const lit = lampY > box.top - 60 && lampY < box.bottom + 60;
-    label.classList.toggle('lit', lit);
-  });
-
-  /* Glass tilts its sheen toward wherever the band currently is. */
-  plates.forEach(plate => {
-    const box = plate.getBoundingClientRect();
-    const centre = box.top + box.height / 2;
-    const offset = Math.min(Math.max((lampY - centre) / viewport, -1), 1);
-    plate.style.setProperty('--sheen', `${(offset * 26).toFixed(1)}deg`);
-  });
-
-  if (Math.abs(target - lampY) > 0.4) {
-    lampFrame = window.requestAnimationFrame(paintLamp);
-  }
-}
-
-function requestLamp() {
-  if (!lampFrame) {
-    lampFrame = window.requestAnimationFrame(paintLamp);
-  }
-}
-
-if (lamp && !reduceMotion.matches) {
-  window.addEventListener('scroll', requestLamp, { passive: true });
-  window.addEventListener('resize', requestLamp);
-
-  window.addEventListener(
-    'pointermove',
-    function (event) {
-      if (event.pointerType === 'touch') {
-        return;
+        setTimeout(() => {
+          btn.innerHTML = originalText;
+          btn.style.color = '';
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy: ', err);
       }
-      pointerY = event.clientY;
-      requestLamp();
-    },
-    { passive: true }
-  );
-
-  document.addEventListener('pointerleave', function () {
-    pointerY = null;
-    requestLamp();
+    });
   });
-
-  requestLamp();
 }
 
-/* --- Entrance: records rise onto the wall once -------------- */
-
-const risers = document.querySelectorAll('.rise');
-
-if (risers.length && 'IntersectionObserver' in window && !reduceMotion.matches) {
-  risers.forEach(el => el.classList.add('waiting'));
-
-  const observer = new IntersectionObserver(
-    function (entries) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-          return;
-        }
-
-        const group = entry.target.parentElement
-          ? Array.from(entry.target.parentElement.children).indexOf(entry.target)
-          : 0;
-        entry.target.style.setProperty(
-          '--rise-delay',
-          `${Math.min(group, 6) * 70}ms`
-        );
-        entry.target.classList.add('shown');
-        observer.unobserve(entry.target);
-      });
-    },
-    { rootMargin: '0px 0px -12% 0px', threshold: 0.08 }
-  );
-
-  risers.forEach(el => observer.observe(el));
-} else {
-  risers.forEach(el => el.classList.add('shown'));
-}
-
-/* --- Deep-link buttons (preserved) -------------------------- */
-
-const contactDestinations = {
-  phone: 'tel:+254798348149',
-  whatsapp: 'https://wa.me/254798348149',
-  linkedin: 'https://www.linkedin.com/in/anthony-robert-5a5290227/',
-  twitter: 'https://x.com/roba_254',
-  instagram: 'https://www.instagram.com/robahdev?igsh=MXdjMG0wbms0Z2U4bQ=='
-};
-
-document.querySelectorAll('[data-contact-action]').forEach(button => {
-  button.addEventListener('click', function () {
-    const action = this.getAttribute('data-contact-action');
-    const destination = contactDestinations[action];
-
-    if (!destination) {
-      return;
-    }
-
-    if (action === 'phone') {
-      window.location.href = destination;
-      return;
-    }
-
-    window.open(destination, '_blank', 'noopener');
-  });
-});
-
-const currentYear = document.getElementById('currentYear');
-if (currentYear) {
-  currentYear.textContent = new Date().getFullYear();
-}
-
-/* --- Dispatch: the Gmail handoff, unchanged in substance ----
-   There is no server. The form composes the message and opens Gmail; the
-   copy says so, and the fallback button exists for blocked popups. */
-
-const portfolioEmail = 'robahdev254@gmail.com';
-
-function createMailFallback(form) {
-  const fallback = document.createElement('div');
-  fallback.className = 'mail-fallback';
-  fallback.hidden = true;
-
-  const text = document.createElement('p');
-  text.className = 'mail-fallback-text';
-  text.textContent = 'If Gmail did not open, use this button instead.';
-
-  const actions = document.createElement('div');
-  actions.className = 'mail-fallback-actions';
-
-  const gmailLink = document.createElement('a');
-  gmailLink.className = 'act act-ink';
-  gmailLink.target = '_blank';
-  gmailLink.rel = 'noopener';
-  gmailLink.textContent = 'Open Gmail';
-
-  actions.append(gmailLink);
-  fallback.append(text, actions);
-  form.append(fallback);
-
-  return { fallback, gmailLink };
-}
-
-function getMailFallback(form) {
-  const existing = form.querySelector('.mail-fallback');
-
-  if (existing) {
-    return {
-      fallback: existing,
-      gmailLink:
-        existing.querySelector('[data-mail-provider="gmail"]') ||
-        existing.querySelector('a')
-    };
-  }
-
-  const fallback = createMailFallback(form);
-  fallback.gmailLink.dataset.mailProvider = 'gmail';
-  return fallback;
-}
-
-function buildEmailBody(name, email, message) {
-  return [`Name: ${name}`, `Email: ${email}`, `Message: ${message}`].join('\n');
-}
-
-function buildMailLinks(to, subject, body) {
-  const encodedTo = encodeURIComponent(to);
-  const encodedSubject = encodeURIComponent(subject);
-  const encodedBody = encodeURIComponent(body);
-
-  return {
-    gmail: `https://mail.google.com/mail/?view=cm&fs=1&to=${encodedTo}&su=${encodedSubject}&body=${encodedBody}`
-  };
-}
-
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-  contactForm.addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    if (!contactForm.checkValidity()) {
-      contactForm.reportValidity();
-      return;
-    }
-
-    const submitButton = contactForm.querySelector('button[type="submit"]');
-    const formStatus = document.getElementById('formStatus');
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
-    const subject = name ? `Portfolio enquiry — ${name}` : 'Portfolio enquiry';
-    const body = buildEmailBody(name, email, message);
-    const links = buildMailLinks(portfolioEmail, subject, body);
-    const fallback = getMailFallback(contactForm);
-
-    fallback.gmailLink.href = links.gmail;
-    fallback.gmailLink.onclick = function (fallbackEvent) {
-      fallbackEvent.preventDefault();
-      window.open(links.gmail, '_blank', 'noopener');
-    };
-
-    if (formStatus) {
-      formStatus.className = 'dispatch-status';
-      formStatus.textContent = 'Opening Gmail with your message ready to send...';
-    }
-
-    if (submitButton) {
-      submitButton.disabled = true;
-    }
-
-    fallback.fallback.hidden = true;
-    const gmailWindow = window.open(links.gmail, '_blank', 'noopener');
-
-    window.setTimeout(function () {
-      if (submitButton) {
-        submitButton.disabled = false;
-      }
-
-      if (formStatus) {
-        formStatus.className = gmailWindow
-          ? 'dispatch-status success'
-          : 'dispatch-status error';
-        formStatus.textContent = gmailWindow
-          ? 'Gmail opened with your message ready to send.'
-          : 'Your browser blocked the Gmail popup. Use the Gmail button below.';
-      }
-
-      fallback.fallback.hidden = Boolean(gmailWindow);
-    }, 800);
+/* --- Dynamic Year Stamp ----------------------------------- */
+function initYearStamp() {
+  const yearElements = document.querySelectorAll('.current-year');
+  const currentYear = new Date().getFullYear();
+  yearElements.forEach((el) => {
+    el.textContent = currentYear;
   });
 }

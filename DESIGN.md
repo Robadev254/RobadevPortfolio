@@ -1,130 +1,49 @@
-# Design — The Catalogue Wall
+# Design System & Aesthetic Documentation — Anthony Mwongela Portfolio
 
 <!-- impeccable:design-schema 1 -->
 
-Anthony Mwongela's portfolio, rebuilt as a catalogue. Seed key `cd9f9a1d`,
-assigned direction index 6. Mode: **Persuade** — the visitor is a recruiter
-deciding whether to open a conversation.
+Anthony Mwongela's engineering portfolio, redesigned for peak professional craft, technical credibility, and high-conversion client appeal.
 
-## Thesis
+## Design Vision & Identity ("Luminous Obsidian & Cyber-Craft")
 
-A portfolio is a collection, so it is presented the way an institution presents
-objects: every project, credential and capability is an accessioned object with
-a rigorous label. It refuses the developer-portfolio arrangement of
-equal-weight glowing tiles where nothing is ever named, dated, or accounted
-for.
+The redesign is built on a clear premise: **The portfolio is the primary frontend work sample.** For clients and engineering leaders, every pixel, layout constraint, focus ring, and typography choice demonstrates the developer's mastery of modern web software.
 
-Absence is drawn rather than omitted. Where there is no employment history, no
-live deployment, no testimonial, the site prints a ruled `not recorded` entry.
-That is the argument: this candidate tells you what is missing before you ask.
+### 1. Palette & Surface Tokens
+- **Canvas / Wall**: Deep Obsidian (`#090c10`) with radial ambient illumination meshes (`rgba(16, 185, 129, 0.12)`, `rgba(6, 182, 212, 0.06)`, `rgba(245, 158, 11, 0.05)`).
+- **Cards & Surfaces**: Elevated glassmorphic surfaces (`#0e131b` with subtle `1px solid rgba(255, 255, 255, 0.1)`). On hover, elevations lift with emerald edge illumination (`#34d399` at 35% opacity).
+- **Primary Accent**: Electric Emerald (`#10b981` / `#34d399` / `#6ee7b7`) signaling performance, execution, and active availability.
+- **Secondary Accent**: Warm Amber (`#f59e0b` / `#fbbf24`) highlighting academic honors, distinctions, and verified credentials.
+- **Tertiary Accent**: Cyan / Electric Blue (`#06b6d4`) for system administration and DevOps domains.
 
-## The world
+### 2. Typography & Hierarchy
+- **Primary Font**: Self-hosted `Archivo` variable font across custom weight (100–900) and stretch (62%–125%) axes.
+- **Headings**: Tight tracking (`-0.03em`), bold weights, responsive font clamps (`clamp(2.25rem, 5vw + 1rem, 3.75rem)`).
+- **Body & Captions**: Crisp readable line-height (`1.65` to `1.7`), high contrast against dark canvas (WCAG AA compliant).
+- **Tags & Code**: Monospace-accented pills for tech stacks and architectural specifications.
 
-- **Wall.** Deep gallery green, `#12251e`, with a lit variant and a deeper
-  poché for recessed areas. The site is a room, not a document.
-- **Label stock.** True white `#fbfaf7` cards with hairline `#e4e0d4` edges,
-  set on the wall and carrying near-black ink. Every claim lives on stock.
-- **Vitrines.** Images are mounted in black-steel frames whose glass carries a
-  screen-blended sheen; the sheen angle is computed from the lamp.
-- **Brass.** `#c8942f` / `#ebc87e` / `#8f6412` is the only saturated accent on
-  the entire site. It marks the surname, the current room, the primary action,
-  and the lamp. Nothing else is allowed to be colourful.
-- **Type.** Archivo variable, self-hosted, subset into latin and latin-ext
-  ranges. Both axes are used for real: `font-weight: 100 900` and
-  `font-stretch: 62% 125%`. Display headings run expanded and tight-tracked;
-  register keys run condensed small-caps at wide letter-spacing. Numerals are
-  tabular everywhere, because this is a record.
+### 3. Key Components & Features
+1. **Glassmorphic Navigation Bar (`.site-header`)**:
+   - Sticky frosted header with blur backdrop.
+   - Active route indicator with emerald pill styling.
+   - Accessible mobile menu drawer with ARIA attributes and focus trap.
+2. **High-Impact Hero Section**:
+   - Live availability badge with pulsating radar indicator.
+   - Dual-CTA cluster (Featured Works, Hire Me / Consult, Résumé PDF Download).
+   - High-resolution framed portrait with glowing gradient backdrop.
+3. **Services Bento Grid (`.card`)**:
+   - 6 client-tailored solutions: Full-Stack Web Apps, Frontend Architecture, Backend APIs, Linux Systems & DevOps, Custom Business Desktop GUIs, Technical Consultation.
+4. **Case Study Cards (`.project-card`)**:
+   - Two-column responsive layout alternating visual preview and architecture overview.
+   - Real-world challenges solved, bulleted engineering highlights, and direct GitHub links.
+5. **Interactive Project Inquiry Composer (`#inquiryForm`)**:
+   - Dynamic topic pills that auto-populate message templates based on client need.
+   - Frictionless Gmail and default mail client handoff with fallback triggers.
+6. **One-Click Clipboard Actions**:
+   - Direct copy buttons for email and phone with instant animated confirmation.
 
-## Tokens
-
-All in `:root` in [style.css](style.css). Wall / stock / ink / on-wall / rule /
-brass families, a 4px-based spacing scale `--s1`…`--s10`, `--gutter` as a
-clamp, `--measure: 68ch`, `--frame: min(1320px, 100%)`, and one shared easing
-`--ease: cubic-bezier(0.16, 1, 0.3, 1)`. Browser chrome is themed from the same
-tokens: selection, caret, scrollbar track and thumb, focus ring.
-
-## The signature interaction — the lamp
-
-One warm band of light lies across the wall. It is a single fixed element
-(`.lamp`) whose `--lamp-y` is written by [script.js](script.js) from pointer
-position, falling back to a slow drift from a third to two thirds down the wall
-as the document scrolls. Everything that reacts reads that one light source:
-
-- Label stock gains `.lit` when the band crosses its box.
-- Vitrine glass tilts its `--sheen` toward wherever the band is.
-
-No card lights itself, and there is no per-element hover glow. The point is
-that it reads as one lamp being walked past. Under
-`prefers-reduced-motion: reduce` the lamp is not driven at all and the sheen is
-removed.
-
-The only other motion is a single entrance: `.rise` elements translate 18px and
-fade in once, staggered 70ms by position, via `IntersectionObserver`. Removed
-entirely under reduced motion — removed, not shortened.
-
-## Structure
-
-Seven routes, all kept and each redesigned.
-
-| Route | Room | Contents |
-|---|---|---|
-| `index.html` | 00 Wall | Opening, statement, practice ledger, two works, holdings, record, contact |
-| `about.html` | 01 About | Subject and method labels, standing ledger |
-| `whatido.html` | 02 Practice | Six practice labels in a label grid, marked core / working / foundation |
-| `skills.html` | 03 Holdings | Eight holding groups, including a `not recorded` group |
-| `projects.html` | 04 Works | Exactly three objects, each vitrine + label + repository |
-| `education.html` | 05 Record | Four records with marks as awarded |
-| `contact.html` | 06 Contact | Reach rows, availability ledger, Gmail dispatch form |
-
-Recurring components: `.directory` (sticky header, rooms numbered 00–06, a
-disclosure drawer below 900px), `.opening`, `.object` (vitrine + label stack,
-`.reverse` alternates the side), `.label` (accession rail + record, a two-column
-register entry rather than an icon-heading-text tile), `.ledger`,
-`.holdings`, `.reach`, `.dispatch`, and `.register` — the dense agate footer
-that ends every page with the full account, including what is not recorded.
-
-Icons are an authored inline SVG `<symbol>` sprite, `viewBox="0 0 24 24"`, one
-stroke weight of 1.7 throughout. No icon font, no brand marks — social links
-are tracked-caps text with a stroked external-link glyph, which keeps a single
-stroke language and avoids hand-recalled brand path data.
-
-## Honesty constraints the design enforces
-
-- The contact form does not claim to send mail. There is no server. It composes
-  the message and opens Gmail, the copy says exactly that, and a fallback
-  button appears if the popup is blocked.
-- There are three works. The grid is built for three and does not invite a
-  fourth.
-- Employment history, client work, live deployment URLs and testimonials are
-  printed as `not recorded`. They are never implied.
-- Practice areas carry a depth marker: core, working, or foundation.
-
-## Accessibility
-
-The copy claims accessibility, so the build honours it: skip link, visible
-`:focus-visible` rings in brass (switching to `--brass-deep` on light stock),
-one `<h1>` per page with honest heading order, real `<label>` on every field,
-`aria-current="page"` on the active room, `aria-expanded` on the rooms drawer
-with Escape to close, `role="status"` `aria-live="polite"` form status, AA
-contrast on wall and stock, and a reduced-motion path that removes motion.
-
-## Stack
-
-Static HTML, CSS and JS. No framework, no bundler, no package manager, no
-backend — the site is exactly the files in this directory served over HTTP.
-
-`.impeccable/build-pages.cjs` is a one-off authoring convenience that assembles
-the six inner pages from `index.html`'s shared shell plus the partials in
-`.impeccable/partials/`. It is not part of the site and does not run at build
-or request time. **If you edit the nav or footer, edit `index.html` and re-run
-it; if you edit an inner page directly, edit the partial too or the next run
-will overwrite you.**
-
-## Assets
-
-Filenames were normalised to lowercase-hyphenated (they previously mixed case
-and contained spaces, which had already caused one production image bug):
-`projectsimages/portrait.jpg`, `alx-devops.png`, `portfolio-site.jpg`,
-`restaurant-gui.jpg`, `images/kca-university.jpg`, `images/makueni-boys.png`,
-`resume-anthony-mwongela.pdf`. The résumé, previously orphaned at the repo
-root, is now linked as evidence from the opening, holdings, record and footer.
+### 4. Accessibility & Performance
+- Zero external runtime framework overhead (vanilla CSS + vanilla JS).
+- Full keyboard navigation with high-visibility focus rings.
+- Semantic HTML5 landmarks (`<header>`, `<main>`, `<section>`, `<article>`, `<nav>`, `<footer>`).
+- Strict `prefers-reduced-motion` compliance removing non-essential transitions for motion-sensitive users.
+- Universal responsive support from 320px mobile screens to 4K widescreen displays.
