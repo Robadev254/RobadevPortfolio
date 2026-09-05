@@ -48,16 +48,18 @@ A junior-to-mid full-stack engineer whose breadth is real and documented: formal
 ## Evidence on Hand
 
 Real and verified:
-- GitHub: `github.com/Robadev254` — public repos `alx-system_engineering-devops`, `RobadevPortfolio`, `USERINTERFACE-JAVA`.
+- GitHub: `github.com/Robadev254` — 36 public repos; the site features `alx-system_engineering-devops`, `RobadevPortfolio`, `USERINTERFACE-JAVA`. The résumé additionally cites `hospital`, `nexus_marketplace`, `Debt-Management`, `Sakupharmacy`, `CAT-ML`, `CSharp`, `Banking`, and the ALX track repos.
 - LinkedIn: `linkedin.com/in/anthony-robert-5a5290227/`. X: `x.com/roba_254`. Instagram: `robahdev`.
-- Email `robahdev254@gmail.com`, phone/WhatsApp `+254798348149`.
+- Email `robahdev254@gmail.com` (primary) and `anthonioroberto2001@gmail.com`, phone/WhatsApp `+254798348149`.
 - KCA University, BSc Software Development, Second Class Upper, full-time 4 years.
 - ALX Africa Software Engineering, 80%; AI Career Essentials, 85%; 12-month program.
-- Makueni Boys High School, secondary education.
-- Three projects with live repo links and screenshot images.
-- Resume at `myResume.pdf`.
+- Makueni Boys High School, KCSE mean grade B+.
+- Three projects with live repo links and screenshot images (site); five plus a roll-up line (résumé).
+- Employment, supplied by the user 2026-09: **IT Support Personnel, Kenya Forest Service HQ, Nairobi — industrial attachment, Aug 2025 – Dec 2025** (database management; network installation and troubleshooting; web design; system design, build and testing; Python automation; authorised Python web scripting). **Founder & Lead Engineer, Robertech** — custom software studio, still in development, `https://robadev254-robertecch-vmgj.vercel.app/`.
+- Terraform is a claimed skill (user-supplied, 2026-09); no repo evidence on GitHub yet.
+- Résumé sources of truth: `resume.html` (print-first, 2 pages A4) → `resume-anthony-mwongela.pdf`; ATS copy at `Anthony_Mwongela_Robert_Resume.docx`. `myResume.pdf` / `myResume.docx` are the superseded originals.
 
-Absent — must not be fabricated: employment history, job titles, dates, company names, client work, testimonials, metrics, user counts, live deployed URLs for the projects, and any certification not listed above. There are exactly three projects; do not invent a fourth to fill a grid.
+Absent — must not be fabricated: any employment, title, date, or company beyond the two roles above; client work; testimonials; metrics; user counts; live deployed URLs for the site's three projects; and any certification not listed above (AWS Cloud Practitioner and Advanced Python are *in progress*, never "held"). Robertech's own marketing copy carries figures and testimonials that are not verified — do not import them.
 
 ## Product Principles
 

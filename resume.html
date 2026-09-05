@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Résumé | Anthony Mwongela Robert — Software Engineer</title>
+  <meta name="description" content="Résumé of Anthony Mwongela Robert: software engineer, founder of Robertech, BSc Software Development (KCA University), ALX Software Engineering graduate. Full-stack, Linux/DevOps, Terraform, databases.">
+  <link rel="icon" href="./favicon.ico" sizes="any">
+  <style>
+    @font-face {
+      font-family: 'Archivo';
+      font-style: normal;
+      font-weight: 100 900;
+      font-stretch: 62% 125%;
+      font-display: swap;
+      src: url('./fonts/archivo-latin.woff2') format('woff2');
+    }
+
+    :root {
+      --ink: #10151c;
+      --ink-soft: #39424f;
+      --ink-mute: #626e7d;
+      --rule: #d5dae1;
+      --rule-soft: #e8ebef;
+      --accent: #05714f;
+      --accent-soft: #0f8d64;
+      --paper: #ffffff;
+      --wash: #f5f8f6;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      font-family: 'Archivo', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-size: 9.4pt;
+      line-height: 1.31;
+      color: var(--ink);
+      background: #e9ecef;
+      padding: 24px 12px 48px;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .sheet {
+      width: 210mm;
+      max-width: 100%;
+      margin: 0 auto;
+      background: var(--paper);
+      padding: 13mm 14mm 12mm;
+      box-shadow: 0 18px 50px rgba(9, 12, 16, 0.18);
+    }
+    /* --- Masthead --- */
+    .masthead { border-bottom: 2pt solid var(--accent); padding-bottom: 5pt; }
+    .name {
+      font-size: 21pt;
+      font-weight: 800;
+      font-stretch: 90%;
+      letter-spacing: -0.5pt;
+      line-height: 1.02;
+    }
+    .name em { font-style: normal; color: var(--accent); }
+    .tagline {
+      margin-top: 2pt;
+      font-size: 9.6pt;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.15pt;
+    }
+    .contact-rows { margin-top: 4pt; display: grid; gap: 1.5pt; }
+    .contact-row {
+      font-size: 8.7pt;
+      color: var(--ink-soft);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 5pt;
+      align-items: baseline;
+    }
+    .contact-row .sep { color: var(--rule); }
+    .contact-row b { font-weight: 700; color: var(--ink); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover, a:focus-visible { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+    /* --- Sections --- */
+    section { margin-top: 6.8pt; break-inside: auto; }
+    h2 {
+      font-size: 9.1pt;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1pt;
+      color: var(--accent);
+      padding-bottom: 2pt;
+      border-bottom: 0.75pt solid var(--rule);
+      margin-bottom: 4.6pt;
+    }
+    p.summary { color: var(--ink-soft); text-align: justify; hyphens: auto; }
+    /* --- What I Do grid --- */
+    .do-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5pt 12pt; }
+    .do-item { font-size: 8.9pt; color: var(--ink-soft); padding-left: 7pt; position: relative; }
+    .do-item::before {
+      content: ""; position: absolute; left: 0; top: 3.8pt;
+      width: 2.6pt; height: 2.6pt; background: var(--accent-soft); border-radius: 50%;
+    }
+    .do-item b { color: var(--ink); font-weight: 700; }
+    .process {
+      margin-top: 4pt; padding: 3.5pt 6pt;
+      background: var(--wash); border-left: 2pt solid var(--accent-soft);
+      font-size: 8.6pt; color: var(--ink-soft);
+    }
+    .process b { color: var(--ink); font-weight: 700; }
+
+    /* --- Experience --- */
+    .role { margin-bottom: 5pt; break-inside: avoid; }
+    .role:last-child { margin-bottom: 0; }
+    .role-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10pt; }
+    .role-title { font-size: 10pt; font-weight: 700; line-height: 1.25; }
+    .role-title span { font-weight: 600; color: var(--accent); }
+    .role-when {
+      font-size: 8.5pt; font-weight: 700; color: var(--ink-mute);
+      white-space: nowrap; letter-spacing: 0.2pt;
+    }
+    .role-meta { font-size: 8.7pt; color: var(--ink-mute); font-style: italic; }
+    ul { list-style: none; margin-top: 3pt; }
+    li {
+      font-size: 9pt; color: var(--ink-soft);
+      padding-left: 8pt; position: relative; margin-top: 1.5pt;
+    }
+    li:first-child { margin-top: 0; }
+    li::before {
+      content: "▸"; position: absolute; left: 0; top: -0.4pt;
+      color: var(--accent-soft); font-size: 7.4pt;
+    }
+    li b { color: var(--ink); font-weight: 700; }
+    /* --- Projects --- */
+    .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4pt 12pt; }
+    .proj { break-inside: avoid; }
+    .proj-head { font-size: 9.5pt; font-weight: 700; line-height: 1.25; }
+    .proj-head .repo {
+      font-size: 7.7pt; font-weight: 600; color: var(--ink-mute);
+      font-family: 'Consolas', ui-monospace, monospace;
+    }
+    .proj-desc { font-size: 8.8pt; color: var(--ink-soft); }
+    .stack {
+      font-size: 7.8pt; font-weight: 600;
+      color: var(--accent); letter-spacing: 0.15pt;
+    }
+
+    /* --- ALX programme blocks --- */
+    .alx-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4pt 12pt; }
+    .alx-block { break-inside: avoid; }
+    .alx-title { font-size: 9.2pt; font-weight: 700; }
+    .alx-body { font-size: 8.8pt; color: var(--ink-soft); }
+    .alx-repos {
+      font-size: 7.7pt; color: var(--ink-mute);
+      font-family: 'Consolas', ui-monospace, monospace;
+    }
+
+    /* --- Skills / two-column key-value rows --- */
+    .kv { display: grid; grid-template-columns: 36mm 1fr; gap: 2.2pt 8pt; }
+    .kv dt { font-size: 8.9pt; font-weight: 700; color: var(--ink); }
+    .kv dd { font-size: 8.9pt; color: var(--ink-soft); }
+    .kv dd mark {
+      background: rgba(15, 141, 100, 0.14); color: var(--accent);
+      font-weight: 700; padding: 0 1.5pt; border-radius: 2pt;
+    }
+
+    /* --- Footer strip --- */
+    .cols-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6pt 14pt; }
+    .mini-h {
+      font-size: 8pt; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.8pt; color: var(--accent); margin-bottom: 1.5pt;
+    }
+    .mini-body { font-size: 8.9pt; color: var(--ink-soft); }
+    /* --- Screen-only toolbar --- */
+    .toolbar {
+      width: 210mm; max-width: 100%; margin: 0 auto 12px;
+      display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+    }
+    .tb-btn {
+      font: inherit; font-size: 9pt; font-weight: 700;
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 7px 13px; border-radius: 7px; cursor: pointer;
+      border: 1px solid var(--accent); background: var(--accent); color: #fff;
+    }
+    .tb-btn.ghost { background: #fff; color: var(--accent); }
+    .tb-btn:hover { background: var(--accent-soft); border-color: var(--accent-soft); color: #fff; }
+    .tb-note { font-size: 8.6pt; color: #4a5560; margin-left: auto; }
+
+    @media screen and (max-width: 780px) {
+      body { padding: 12px 0 24px; }
+      .sheet { padding: 9mm 7mm; box-shadow: none; }
+      .do-grid, .cols-2, .proj-grid, .alx-grid { grid-template-columns: 1fr; }
+      .kv { grid-template-columns: 1fr; gap: 1pt 0; }
+      .kv dd { margin-bottom: 3pt; }
+      .role-head { flex-direction: column; gap: 1pt; }
+      .toolbar { padding: 0 12px; }
+      .tb-note { margin-left: 0; flex-basis: 100%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; animation: none !important; }
+    }
+
+    /* --- Print --- */
+    @page { size: A4; margin: 9mm 10mm; }
+
+    @media print {
+      body { background: #fff; padding: 0; font-size: 9.4pt; }
+      .sheet { width: auto; padding: 0; box-shadow: none; }
+      .toolbar { display: none !important; }
+      a { color: var(--ink); }
+      .masthead a, .contact-row a, .role-meta a { color: var(--accent); }
+      section { break-inside: auto; }
+      h2 { break-after: avoid; }
+      ul, li, p, dd, dl { widows: 1; orphans: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <button class="tb-btn" id="printBtn" type="button">Print / Save as PDF</button>
+    <a class="tb-btn ghost" href="./resume-anthony-mwongela.pdf" download="Anthony_Mwongela_Resume.pdf">Download PDF</a>
+    <a class="tb-btn ghost" href="./Anthony_Mwongela_Robert_Resume.docx" download>Download Word (.docx)</a>
+    <a class="tb-btn ghost" href="./index.html">Back to portfolio</a>
+    <span class="tb-note">Last updated September 2026</span>
+  </div>
+
+  <main class="sheet">
+    <header class="masthead">
+      <h1 class="name">Anthony <em>Mwongela Robert</em></h1>
+      <p class="tagline">Software Engineer · Full-Stack &amp; DevOps · Founder, Robertech</p>
+      <div class="contact-rows">
+        <p class="contact-row">
+          <span>Nairobi, Kenya</span><span class="sep">|</span>
+          <a href="tel:+254798348149">+254 798 348 149</a><span class="sep">|</span>
+          <a href="mailto:robahdev254@gmail.com">robahdev254@gmail.com</a><span class="sep">|</span>
+          <a href="mailto:anthonioroberto2001@gmail.com">anthonioroberto2001@gmail.com</a>
+        </p>
+        <p class="contact-row">
+          <b>Portfolio</b> <a href="https://robadev254-robertecch-vmgj.vercel.app/">robadev254-robertecch-vmgj.vercel.app</a><span class="sep">|</span>
+          <b>GitHub</b> <a href="https://github.com/Robadev254">github.com/Robadev254</a><span class="sep">|</span>
+          <b>LinkedIn</b> <a href="https://www.linkedin.com/in/anthony-robert-5a5290227/">in/anthony-robert-5a5290227</a>
+        </p>
+      </div>
+    </header>
+
+    <section>
+      <h2>Professional Summary</h2>
+      <p class="summary">
+        Software engineer with a BSc in Software Development from KCA University (Second Class Honours, Upper
+        Division) and a distinction-grade ALX Software Engineering qualification. I work across the full stack —
+        accessible responsive interfaces, REST APIs and relational data models, and the Linux systems and
+        infrastructure-as-code underneath them. Most recently IT Support Personnel at Kenya Forest Service
+        headquarters, covering database administration, network installation and troubleshooting, in-house system
+        design and build, and Python automation. Founder of Robertech, a custom software engineering studio now in
+        development. I own problems end to end: requirements, architecture, implementation, testing, deployment and
+        handover documentation.
+      </p>
+    </section>
+    <section>
+      <h2>What I Do</h2>
+      <div class="do-grid">
+        <p class="do-item"><b>Full-Stack Web Applications.</b> Complete web products from concept to deployment — responsive front ends over secure backend APIs.</p>
+        <p class="do-item"><b>Frontend Architecture &amp; UI Redesign.</b> Slow or dated interfaces rebuilt fast and accessible (WCAG AA) on design-token systems.</p>
+        <p class="do-item"><b>Backend Systems &amp; Database Architecture.</b> Data modelling, CRUD, auth and REST endpoints in Node.js, Python or PHP, with defensive error handling.</p>
+        <p class="do-item"><b>Linux Systems &amp; DevOps Automation.</b> Server provisioning, Bash scripts, Terraform, Nginx proxying, load balancing, firewall hardening, CI/CD.</p>
+        <p class="do-item"><b>Custom Business Software &amp; GUIs.</b> Desktop management tools, POS systems and internal operational software on object-oriented architectures.</p>
+        <p class="do-item"><b>Technical Consultation &amp; Code Review.</b> Stack selection, performance-bottleneck and database-optimisation reviews, engineering guidance.</p>
+      </div>
+      <p class="process">
+        <b>How I work —</b> 01 Discovery and requirements alignment · 02 Architecture, schemas, API contracts and
+        design tokens · 03 Iterative build in milestones with clean Git history and staging demos · 04 Quality audit,
+        accessibility and responsive testing, deployment and documented handover.
+      </p>
+    </section>
+    <section>
+      <h2>Experience</h2>
+
+      <div class="role">
+        <div class="role-head">
+          <h3 class="role-title">Founder &amp; Lead Engineer <span>· Robertech</span></h3>
+          <span class="role-when">2026 – Present</span>
+        </div>
+        <p class="role-meta">Custom software engineering studio · Nairobi, Kenya · in development · <a href="https://robadev254-robertecch-vmgj.vercel.app/">robadev254-robertecch-vmgj.vercel.app</a></p>
+        <ul>
+          <li>Founded a studio building bespoke business systems instead of reselling packaged products, across five service lines: <b>point-of-sale, adaptive ERP, tailored business software, web platforms and enterprise automation</b>.</li>
+          <li>Building the platform end to end in <b>type-safe TypeScript</b> over a <b>schema-validated PostgreSQL</b> database, with an audit trail on critical state transitions and modular, test-covered code.</li>
+          <li>Engineering the POS core for real retail conditions — high-concurrency checkout, offline resilience with a sync queue, multi-branch replication to HQ and fast barcode scanning — and owning positioning, the client-facing site, hosting and Vercel deployment.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="role-head">
+          <h3 class="role-title">IT Support Personnel <span>· Kenya Forest Service (KFS), Headquarters</span></h3>
+          <span class="role-when">Aug 2025 – Dec 2025</span>
+        </div>
+        <p class="role-meta">Industrial attachment · Nairobi, Kenya</p>
+        <ul>
+          <li><b>Database management —</b> administered institutional databases: structured queries and reporting extracts, record integrity checks, routine backups and restore verification.</li>
+          <li><b>Network installation &amp; troubleshooting —</b> installed and configured LAN infrastructure across HQ departments (cabling, switch ports, IP addressing, user access); diagnosed connectivity, DNS and hardware faults as first-line support.</li>
+          <li><b>System design, build &amp; testing —</b> gathered requirements from departmental users, designed the data model and workflow, implemented the system and ran functional and acceptance testing before rollout.</li>
+          <li><b>Web design —</b> built web pages and internal interfaces to accessible, responsive HTML/CSS/JavaScript standards.</li>
+          <li><b>Automation with Python —</b> replaced repetitive administrative and reporting routines with Python scripts, cutting hand-keyed data entry and report turnaround.</li>
+          <li><b>Authorised web scripting —</b> wrote sanctioned Python scripts to collect, clean and consolidate data from approved web sources into internal reporting formats.</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h2>Selected Projects — github.com/Robadev254</h2>
+      <div class="proj-grid">
+        <div class="proj">
+          <p class="proj-head">Robertech Studio Platform <span class="repo">· live</span></p>
+          <p class="proj-desc">Service catalogue, an interactive sandbox simulating POS, ERP and event-automation telemetry, hosting pages and a command-centre dashboard.</p>
+          <p class="stack">TypeScript · Next.js · PostgreSQL · Vercel</p>
+        </div>
+
+        <div class="proj">
+          <p class="proj-head">Engineering Portfolio &amp; Design System <span class="repo">· RobadevPortfolio</span></p>
+          <p class="proj-desc">Seven-page site with no CSS or JS framework: custom design tokens, self-hosted variable typography, mail-draft inquiry composer, WCAG AA keyboard and reduced-motion paths.</p>
+          <p class="stack">HTML5 · Vanilla CSS3 · JavaScript ES6+ · Netlify</p>
+        </div>
+
+        <div class="proj">
+          <p class="proj-head">Restaurant POS &amp; Operations Manager <span class="repo">· USERINTERFACE-JAVA</span></p>
+          <p class="proj-desc">Desktop application for order taking, billing and discounts, receipt generation and menu inventory. Event-driven UI with input sanitisation; data models separated from the view for database persistence.</p>
+          <p class="stack">Java SE · Swing · OOP / MVC</p>
+        </div>
+
+        <div class="proj">
+          <p class="proj-head">Hospital Management System <span class="repo">· hospital</span></p>
+          <p class="proj-desc">Patient registration, patient records and prescription management against a relational schema with server-side validation.</p>
+          <p class="stack">PHP · MySQL · HTML · CSS</p>
+        </div>
+
+        <div class="proj">
+          <p class="proj-head">Marketplace &amp; Debt Management <span class="repo">· nexus_marketplace, Debt-Management</span></p>
+          <p class="proj-desc">A marketplace with listings and transactional flows, plus a debt-tracking system on the CodeIgniter 4 MVC framework with ledger records and repayment schedules.</p>
+          <p class="stack">PHP · CodeIgniter 4 · MySQL</p>
+        </div>
+      </div>
+      <p class="proj-desc" style="margin-top: 3pt;"><b>Across 36 public repositories —</b> Sakupharmacy pharmacy front end · CAT-ML machine-learning notebooks · CSharp advanced application programming · Banking (C++) · Java Swing GUI builds (Flags, Fan, Divisible-by-6-or-5) · Turtle graphics.</p>
+    </section>
+    <section>
+      <h2>ALX Software Engineering Programme — Repository Portfolio</h2>
+      <div class="alx-grid">
+        <div class="alx-block">
+          <p class="alx-title">1 · Low-Level C &amp; Systems Programming</p>
+          <p class="alx-body">Memory management with malloc/free and pointer arithmetic, a from-scratch <b>variadic <code>printf</code></b>, a working <b>Unix shell</b> (fork/exec, PATH resolution, built-ins, signals), a <b>stack/queue bytecode interpreter</b>, and sorting algorithms benchmarked by big-O complexity.</p>
+          <p class="alx-repos">alx-low_level_programming · printf · simple_shell · monty · sorting_algorithms</p>
+        </div>
+
+        <div class="alx-block">
+          <p class="alx-title">2 · Higher-Level Programming (Python)</p>
+          <p class="alx-body">Python OOP and inheritance, exceptions, unit testing and documentation, JSON/CSV serialisation, file I/O, MySQL through an ORM, and consuming REST APIs from scripts. Includes an <b>RSA factoring challenge</b> exercising number theory and performance-bounded search.</p>
+          <p class="alx-repos">alx-higher_level_programming · RSA-Factoring-Challenge</p>
+        </div>
+
+        <div class="alx-block">
+          <p class="alx-title">3 · System Engineering &amp; DevOps</p>
+          <p class="alx-body">Bash automation, Linux permissions and process management, SSH key configuration, web-stack debugging, <b>Nginx</b> configuration and redirects, <b>load balancing with health checks</b>, SSL/TLS termination, UFW firewall hardening, monitoring and web-infrastructure design write-ups.</p>
+          <p class="alx-repos">alx-system_engineering-devops</p>
+        </div>
+
+        <div class="alx-block">
+          <p class="alx-title">4 · Toolchain Foundations</p>
+          <p class="alx-body">Git and GitHub workflow, Vagrant/Ubuntu environment setup, editor and shell fundamentals — the programme's onboarding track.</p>
+          <p class="alx-repos">alx-zero_day · alx-pre_course · zero_day</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Technical Skills</h2>
+      <dl class="kv">
+        <dt>Languages</dt>
+        <dd>Python · JavaScript (ES6+) · TypeScript · Java · C · C++ · C# · PHP · SQL · Bash</dd>
+
+        <dt>Frontend</dt>
+        <dd>React · Next.js · semantic HTML5 · modern CSS3 (Grid, Flexbox) · design-token systems · responsive layout · WCAG AA accessibility</dd>
+
+        <dt>Backend &amp; Data</dt>
+        <dd>Node.js / Express · REST API design · authentication &amp; JWT · CodeIgniter 4 · MySQL / MariaDB · PostgreSQL · relational schema design · query optimisation and indexing · migrations and backups</dd>
+
+        <dt>Infrastructure &amp; DevOps</dt>
+        <dd><mark>Terraform (infrastructure as code)</mark> · Linux / Ubuntu administration · Bash automation · Nginx reverse proxy and load balancing · SSL/TLS · SSH and UFW hardening · GitHub Actions CI/CD · Vercel and Netlify deployment</dd>
+
+        <dt>Networking &amp; IT Support</dt>
+        <dd>LAN installation and cabling · switch and router configuration · IP addressing and subnetting · connectivity and DNS troubleshooting · hardware and software diagnostics · end-user support</dd>
+
+        <dt>Automation &amp; Analysis</dt>
+        <dd>Python task automation · authorised web scripting and data extraction · report generation · Jupyter notebooks · machine-learning fundamentals · applied AI tooling and prompt engineering</dd>
+
+        <dt>Practices &amp; Strengths</dt>
+        <dd>Git and GitHub · OOP and clean code · MVC and SOLID · unit testing · Postman and cURL · Agile milestone delivery · analytical problem solving · clear written and verbal communication · client-facing requirements gathering</dd>
+
+        <dt>Spoken Languages</dt>
+        <dd>English — fluent, written and spoken · Kiswahili — fluent, written and spoken</dd>
+
+        <dt>Interests</dt>
+        <dd>Coding challenges on LeetCode and HackerRank · hackathons and collaborative builds · open-source contribution · emerging frameworks and developer tooling · tech meetups, webinars and online communities</dd>
+      </dl>
+    </section>
+    <section>
+      <h2>Education &amp; Certifications</h2>
+      <div class="role">
+        <div class="role-head">
+          <h3 class="role-title">BSc Software Development <span>· KCA University, Nairobi</span></h3>
+          <span class="role-when">Graduated 2025</span>
+        </div>
+        <p class="role-meta">Second Class Honours, Upper Division · full-time four-year programme · software engineering lifecycles, database management systems, data structures and algorithms, OOP construction, web systems and network fundamentals</p>
+      </div>
+      <div class="role">
+        <div class="role-head">
+          <h3 class="role-title">Kenya Certificate of Secondary Education <span>· Makueni Boys High School</span></h3>
+          <span class="role-when">Mean grade B+</span>
+        </div>
+        <p class="role-meta">Sciences, mathematics and analytical problem solving</p>
+      </div>
+      <ul style="margin-top: 5pt;">
+        <li><b>ALX Africa — Software Engineering Programme.</b> 12-month full-time intensive; final score <b>80%, Distinction</b>. C and low-level programming, Unix system administration, data structures and algorithms, Python, SQL, API architecture and DevOps deployment.</li>
+        <li><b>ALX Africa — AI Career Essentials.</b> Score <b>85%, Distinction</b>. Applied AI tooling, prompt engineering, data analysis and modern engineering workflows.</li>
+        <li><i>In progress:</i> AWS Certified Cloud Practitioner · Advanced Python Programming.</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('printBtn').addEventListener('click', function () {
+      window.print();
+    });
+  </script>
+</body>
+</html>
